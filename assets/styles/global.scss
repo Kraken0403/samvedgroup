@@ -1,0 +1,119 @@
+@import './variables.scss';
+:root {
+    --after-color: '#111111';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Neumont'; /* Replace with your actual font family name */
+  src: url('../fonts/NeueMontreal-Bold.otf') format('opentype'),
+}
+
+@font-face {
+  font-family: 'Neumont';
+  src: url('../fonts/NeueMontreal-Light.otf') format('opentype'),
+}
+
+@font-face {
+    font-family: 'Neumont';
+    src: url('../fonts/NeueMontreal-Medium.otf') format('opentype'),
+}
+
+@font-face {
+    font-family: 'Neumont';
+    src: url('../fonts/NeueMontreal-Regular.otf') format('opentype'),
+}
+
+// @font-face {
+//     font-family: 'Neumont';
+//     src: url('../fonts/NeueMontreal-Italic.otf') format('opentype'),
+// }
+
+html {
+    font-size: .625vw;
+}
+body {
+    font-family: 'Neumont', sans-serif;
+    overflow-x: hidden;
+}
+img {
+    width: 100%;
+}
+
+.container-wide {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    // align-items: center;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.col-25, .col-sm-25 {
+    width: 25%;
+}
+
+.col-50, .col-sm-50 {
+    width: 50%;
+}
+
+.col-25, .col-sm-25 {
+    width: 25%;
+}
+
+.col-60, .col-sm-60 {
+    width: 60%;
+}
+
+.col-20, .col-sm-20{
+    width: 20%;
+}
+.col-33, .col-sm-33{
+    width: 33.3333%;
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+    color: white!important;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-wide{
+        width: 100%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 15px;
+    }
+
+    html {
+        font-size: 1.825vw;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+    .row-down{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+    html {
+        font-size: 0.625vw;
+    }
+}
+

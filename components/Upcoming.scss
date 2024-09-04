@@ -1,0 +1,107 @@
+@import '../assets/styles/variables.scss';
+
+
+.upcoming {
+    &-wrapper {
+        position: relative;
+        width: 100%;
+        height: 70rem;
+        overflow: hidden;
+        // background: transparent;
+        .bg-img-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0,0,0,0.4);
+
+            }
+        }
+        .bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            // z-index: 0;
+            left: 0;
+            top: 0;
+
+           
+        }
+    }
+
+    .upr-caption {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        // height: 30px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        .circle {
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: $white;
+        }    
+
+        p{
+            color: $white;
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .upr-content {
+        position: absolute;
+        width: 35%;
+        height: fit-content;
+        left: 50%;
+        top: 50%;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        .upr-logo {
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .upcoming-wrapper {
+        height: 50rem;
+    }
+
+    .upcoming .upr-caption{
+        left: 15px;
+        top: 15px;
+    }
+
+    .upcoming .upr-content{
+        width: 70%;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+
+}
+

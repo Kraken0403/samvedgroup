@@ -1,0 +1,135 @@
+@import '../assets/styles/variables.scss';
+ 
+.contact-form {
+    .cf-wrapper {
+        width: 100%;
+        .cf-details {
+            display: flex;
+            justify-content: space-between;
+            .social-icons {
+                span {
+                    font-size: 20px;
+                    margin-right: 10px;
+                    color: $dark;
+                }
+            }
+            .cf-detail-card {
+                width: calc(33.33% - 12px);
+                padding: 20px 25px;
+                display: flex;
+                height: 30rem;
+                border: 1px solid $dark;
+                flex-direction: column;
+                justify-content: space-between;
+                transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+                h2 {
+                    font-size: 3rem;
+                    color: $dark;
+                    font-weight: 300;
+                    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+                }
+
+                p {
+                    color: $dark;
+                    font-size: 2rem;
+                    line-height: 1.4;
+                }
+
+                &:hover {
+                    background-color: $accent;
+    
+                    h2 {
+                        color: $white;
+                        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+                    }
+    
+                    p{
+                        color: $white;
+                        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+                    }
+
+                    .social-icons span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .cf-form {
+            margin: auto;
+            width: 50%;
+            .form-group {
+                padding: 80px 0 130px 0px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 300;
+                    margin-bottom: 30px;
+                    // text-transform: capitalize;
+                }
+                
+
+                input,textarea {
+                    width: 100%;
+                    padding: 15px 20px;
+                    font-size: 2rem;
+                    color: $dark;
+                    outline: none;
+                    background-color: $lightbg;
+                    border: 0px;
+                    border-radius: 0px;
+                    margin-bottom: 20px;
+
+                    &::placeholder {
+                        text-transform: capitalize;
+                        font-weight: 300;
+                        font-family: 'Neumont', sans-serif;
+                        color: $lighttext
+                    }
+
+                    
+                }
+                textarea{
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .contact-form .cf-wrapper .cf-details {
+        flex-direction: column;
+    }
+    .contact-form .cf-wrapper .cf-details .cf-detail-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .contact-form .cf-wrapper .cf-form {
+        width: 100%;
+    }
+    .contact-form .cf-wrapper .cf-form .form-group {
+        padding: 60px 0 60px 0;
+    }
+    .contact-form .cf-wrapper .cf-form .form-group a{
+        margin: 0;
+    }
+
+    .contact-form .cf-wrapper .cf-form .form-group .text {
+
+    }
+
+    
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+
+}
+

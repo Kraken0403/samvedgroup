@@ -1,0 +1,63 @@
+@import '../assets/styles/variables.scss';
+
+.tc {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    &-wrapper {
+        position: relative;
+        width: 45%;
+        margin: auto;
+        margin-top: 40px;
+        padding-bottom: 130px;
+
+        .tc-head{
+            text-align: center;
+            h2{
+                padding-bottom: 30px;
+                font-size: 6rem;
+                line-height: 1.2;
+                font-weight: 300;
+                color: $dark;
+                text-transform: capitalize;
+            }
+        }
+
+        .tc-content p {
+            color: $dark;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .tc-wrapper{
+        width: 90%;
+        padding-bottom: 60px;
+        margin-top: 30px;
+    }
+
+    .tc-wrapper .tc-head h2 {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .tc-wrapper{
+        width: 50%;
+        padding-bottom: 60px;
+        margin-top: 30px;
+    }
+
+    .tc-wrapper .tc-head h2{
+        padding-bottom: 15px;
+    }
+    // .tc-wrapper .tc-head h2 {
+    //     font-size: 5rem;
+    // }
+
+}
+
+

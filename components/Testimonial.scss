@@ -1,0 +1,115 @@
+@import '../assets/styles/variables.scss';
+
+.testimonial {
+    padding: 130px 0 0 0;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    &-wrapper {
+        position: relative;
+        width: 100%;
+        
+    }
+
+    &-image-wrapper {
+        position: relative;
+        width: 45%;
+        overflow: hidden;
+        margin: auto;
+        height: 80rem;
+        .tesimonial-big-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            overflow: hidden;
+            div {
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .testimonial-small-image{
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            z-index: 10;
+            div {
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .testimonial{
+        padding: 60px 0 0 0;
+    }
+    .testimonial-image-wrapper {
+        width: 90%;
+    }
+    .testimonial-image-wrapper{
+        height: 70rem;
+    }
+
+    .testimonial-big-image {
+        height: 100%;
+        div {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+    .testimonial{
+        padding: 60px 0 0 0;
+    }
+    .testimonial-image-wrapper {
+        width: 50%;
+    }
+    .testimonial-image-wrapper{
+        height: 80rem;
+    }
+
+    .testimonial-big-image {
+        height: 100%;
+        div {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+{
+  "id": "project_hero",
+  "type": "SharedSlice",
+  "name": "ProjectHero",
+  "description": "ProjectHero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "project_title": {
+          "type": "Text",
+          "config": {
+            "label": "Project Title",
+            "placeholder": ""
+          }
+        },
+        "caption": {
+          "type": "Text",
+          "config": {
+            "label": "Caption",
+            "placeholder": ""
+          }
+        },
+        "project_hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Project Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "project_tags": {
+          "type": "Group",
+          "config": {
+            "label": "Project Tags",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "tag": {
+                "type": "Text",
+                "config": {
+                  "label": "Tag",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "color": {
+          "type": "Color",
+          "config": {
+            "label": "Color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+@import '../assets/styles/variables.scss';
+
+.ab-team {
+    width: 100%;
+    background-color: $lightbg;
+    padding: 130px 0 130px 0;
+    .abt-head{
+        display: flex;
+        justify-content: space-between;
+
+        .abt-caption {
+            width: 35%;
+
+            p{
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: $dark;
+            }
+        }
+
+        .abt-content {
+            width: 65%;
+
+            p{
+                font-size: 3rem;
+                color: $dark;
+                text-transform: capitalize;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .abt-photos {
+        display: flex;
+        gap: 15px;
+        padding-top: 80px;
+        padding-bottom: 130px;
+
+        .abt-photo {
+            width: 100%;
+            height: 40rem;
+            p{
+                color: $dark;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+            }
+            h2 {
+                padding: 10px 0;
+                color: $dark;
+                font-size: 2.2rem;
+                line-height: 1.2;
+                font-weight: 300;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(100%);
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .ab-team {
+        padding: 0px 0 60px;
+    }
+    .ab-team .abt-head{
+        flex-direction: column;
+    }
+    .ab-team .abt-head .abt-caption {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .ab-team .abt-head .abt-content{
+        width: 100%;
+    }
+    .ab-team .abt-photos{
+        padding: 60px 0 0 ;
+        flex-direction: column;
+    }
+    .ab-team .abt-photos .abt-photo {
+        height: 60rem;
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+
+}
+

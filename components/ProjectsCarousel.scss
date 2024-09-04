@@ -1,0 +1,121 @@
+@import '../assets/styles/variables.scss';
+
+
+.pc {
+    padding: 130px 0;
+    position: relative;
+
+    &-wrapper {
+        .pc-head{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: flex-end;
+            h2 {
+                font-size: 6rem;
+                text-transform: capitalize;
+                font-weight: 300;
+                line-height: 1;
+            }
+        }
+
+        .pc-carousel {
+            padding-top: 40px;
+        }
+
+        .w-25 {
+            width: 25%!important;
+            height: fit-content;
+            overflow: hidden;
+            
+        }
+
+        .w-20 {
+            width: 20%!important;
+            overflow: hidden;
+        }
+
+        .w-30 {
+            width: 30%!important;
+        }
+
+        .w-40 {
+            width: 40%!important;
+        }
+
+        .w-45 {
+            width: 45%!important;
+        }
+        .pc-card {
+            // border-radius: 50%;
+            overflow: hidden;
+            color: $dark;
+            text-decoration: none;
+            // width: 50rem;
+            // height: 50rem;
+            user-select: none;
+
+            
+            h2 {
+                font-weight: 300;
+                font-size: 2.4rem;
+                margin: 10px 0;
+            }
+            .tags {
+                display: flex;
+                .tag {
+                    background-color: $lightbgtwo;
+                    margin-right: 10px;
+                    font-size: 1.3rem;
+                    padding: 3px 5px;
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pc {
+        padding: 60px 0;
+    }
+
+    .pc-wrapper .pc-head {
+        flex-direction: column;justify-content: start;
+        align-items: flex-start;
+
+        h2 {
+            padding-bottom: 15px;
+        }
+    }
+
+    .pc-wrapper .pc-card .tags .tag {
+        font-size: 1.8rem;
+    }
+
+    .pc-wrapper .pc-card h2{
+        font-size: 3rem;
+    }
+    .pc-wrapper .pc-head h2 {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+.pc {
+    padding: 60px 0;
+}
+    .pc-wrapper .pc-card .tags .tag {
+        font-size: 1.8rem;
+    }
+
+    .pc-wrapper .pc-card h2{
+        font-size: 3.2rem;
+    }
+
+}
+

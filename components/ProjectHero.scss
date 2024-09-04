@@ -1,0 +1,155 @@
+@import '../assets/styles/variables.scss';
+
+.ph-wrapper {
+    width: 100%;
+    position: relative;
+    height: 150vh;
+    overflow: hidden;
+    .img-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+    }
+    .ph-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }   
+    }
+
+    .ph-content {
+        .ph-head {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding-bottom: 130px;
+            p {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 10rem;
+                font-weight: 300;
+                color: $white;
+                line-height: 1.2;
+            }
+
+        }
+        .ph-main{
+            height: 50vh;
+            display: flex;
+
+            .ph-info {
+                width: 100%;
+                p{
+                    font-size: 2.2rem;
+                    color: $white;
+                    font-weight: 600;
+                    padding-bottom: 30px;
+                    text-transform: uppercase;
+                }
+
+                hr {
+                    color: $white;
+                    opacity: 0.4;
+                }
+                .ph-info-row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-bottom: 30px;
+                    padding-top: 30px;
+                    max-width: 50%;
+                    justify-content: space-between;
+                    .ph-info-col {
+                        width: 33%;
+                        padding-right: 10rem;
+                        padding-bottom: 6rem;
+                        h5 {
+                            color: $white;
+                            font-size: 2rem;
+                            text-transform: uppercase;
+                            font-weight: 300;
+                        }
+
+                        h6 {
+                            color: $white;
+                            font-size: 2rem;
+                            color: $white;
+                            font-weight: 300;
+                            padding-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .ph-wrapper {
+        height: 140vh;
+    }
+    .ph-wrapper .ph-content .ph-head h2 {
+        font-size: 8rem;
+    }
+    .ph-wrapper .ph-content .ph-head {
+        padding-bottom: 60px;
+    }
+    .ph-wrapper .ph-content .ph-main .ph-info .ph-info-row {
+        max-width: 100%;
+    }
+    .ph-wrapper .ph-content .ph-main .ph-info .ph-info-row .ph-info-col {
+        padding: 0px 0 20px 0;
+        width: 50%;
+    }
+    .ph-wrapper .ph-content .ph-main {
+        height: 40vh;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+    .ph-wrapper {
+        height: 130vh;
+    }
+    .ph-wrapper .ph-content .ph-head h2 {
+        font-size: 8rem;
+    }
+    .ph-wrapper .ph-content .ph-head {
+        padding-bottom: 60px;
+    }
+    .ph-wrapper .ph-content .ph-main .ph-info .ph-info-row {
+        max-width: 100%;
+    }
+    .ph-wrapper .ph-content .ph-main .ph-info .ph-info-row .ph-info-col {
+        padding: 0px 0 20px 0;
+        width: 50%;
+    }
+    .ph-wrapper .ph-content .ph-main {
+        height: 30vh;
+    }
+    .ph-wrapper .ph-content .ph-main .ph-info .ph-info-row .ph-info-col h6 {
+        font-size: 3rem;
+    }
+    .ph-wrapper .ph-content .ph-main .ph-info .ph-info-row .ph-info-col h5 {
+        font-size: 3rem;
+    }
+}
+

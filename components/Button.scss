@@ -1,0 +1,104 @@
+@import '../assets/styles/variables.scss';
+
+.custom-button {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    overflow: hidden;
+   
+    a{
+        text-decoration: none;
+        color: $dark;
+        text-transform: capitalize;
+        display: flex;
+        align-items: end;
+        font-size: 20px;
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        &::after {
+            content: '';
+            width: calc(100% - 22px);
+            height: 2px;    
+            position: absolute;
+            background-color: $dark;
+            right: 0;
+            bottom: 0;   
+            transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+         
+        }
+        span.text {
+            margin-left: 22px;
+            transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+        }
+        span.circle {
+            transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+            
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            background-color: $dark;
+            width: 18px;
+            height: 18px;
+            left: 10px; //Divide width by 2
+            border-radius: 50%;
+            // margin-right: 0.5rem;
+        }
+
+        span.line {
+            background-color: $dark;
+           
+        }
+
+        &:hover {
+
+            a {
+                color: $hoverdark;
+            }
+            span.circle {
+                width: 1.4rem;
+                height: 1.4rem;
+                // transform-origin: center center;
+                transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+    
+            &::after {
+                content: '';
+                width: 0%;
+                transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+        }
+    }
+
+   
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .custom-button a{
+        font-size: 16px;
+    }
+
+    .custom-button a span.circle {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .custom-button a{
+        font-size: 18px;
+    }
+
+    .custom-button a span.circle {
+        width: 18px;
+        height: 18px;
+    }
+
+}
+

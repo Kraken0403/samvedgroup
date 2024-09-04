@@ -1,0 +1,224 @@
+@import '../assets/styles/variables.scss';
+
+.pc {
+    padding: 130px 0;
+    background: $lightbg;
+
+   
+    .pc-intro {
+        .pc-head{
+            h2 {
+                font-size: 6rem;
+                font-weight: 300;
+                line-height: 1.2;
+                color: $dark;
+            }
+        }
+    }
+    .pc-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        p{
+            color: $dark;
+            font-size: 2.2rem;
+            line-height: 1.2;
+        }
+    }
+
+    .pca-video-wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .pca-map {
+        width: 50%;
+        height: 100%;
+        
+        h2 {
+            font-size: 5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            color: $dark;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 2.2rem;
+            color: $dark;
+            line-height: 1.2;
+            margin-bottom: 60px;
+        }
+
+        .pca-map-buttons{
+            display: flex;
+            gap: 15px;
+        }
+     }
+
+    .pca-video {
+        position: relative;
+        width: 50%;
+        // height: 50rem;
+        overflow: hidden;
+        
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+      }
+    .pc-images-one {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        .w-70 {
+            width: calc(70% - 7.5px);;
+            overflow: hidden;
+        }
+
+        .w-50{
+            width: calc(50% - 7.5px);
+            overflow: hidden;
+        }
+        .pc-image-one {
+            margin-left: auto;
+           
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .pc-amenities {
+        h2 {
+            font-size: 6rem;
+            color: $dark;
+            font-weight: 300;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+    }
+    .pca-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        
+        .pca-item {
+            padding: 20px 25px;
+            border: 1px solid $hoverdark;
+            width: calc(25% - 12px);
+            height: 30rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+            &:hover {
+                background-color: $accent;
+
+                h6 {
+                    color: $white;
+                    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+                }
+
+                p{
+                    color: $white;
+                    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+                }
+            }
+            h6 {
+                font-size: 3rem;
+                color: $dark;
+                font-weight: 300;
+                transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+
+            p{
+                font-size: 2rem;
+                color: $dark;
+                transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+        }
+    }
+    .book-now{
+        padding: 130px 0 0;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 300;
+            line-height: 1.2;
+            color: $dark;
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .pc {
+        padding: 60px 0;
+
+        .row {
+            flex-direction: column;
+        }
+        .col-50 {
+            width: 100%;
+        }
+    }
+    .pc .pc-intro .pc-head h2 {
+        padding-bottom: 15px;
+        font-size: 5rem;
+    }
+    .pc .pc-content {
+        flex-direction: column;
+    }
+    .pc .pc-images-one {
+        padding-top: 60px;
+    }.pc .pc-images-one .w-70 {
+        width: 100%;
+    }
+    .pc .pc-amenities h2 {
+        padding: 60px 0 30px 0;
+    }
+    .pc .pca-wrapper .pca-item {
+        width: calc(50% - 12px);
+    }
+    .pc .pca-wrapper .pca-item {
+        padding: 15px
+    }
+    .pc .book-now {
+        padding-top: 60px;
+    }
+    .pc .pca-video-wrapper {
+        flex-direction: column;
+    }
+    .pc .pca-video {
+        width: 100%;
+    }
+    .pc .pca-map{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .pc {
+        padding: 60px 0;
+    }
+    .pc .pca-wrapper .pca-item {
+        padding: 15px;
+    }
+    .pc .pc-intro .pc-head h2 {
+        padding-bottom: 15px;
+        // font-size: 5rem;
+    }
+    .pc .pc-amenities h2 {
+        padding: 60px 0 30px 0;
+    }
+}
+

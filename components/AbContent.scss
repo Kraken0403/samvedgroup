@@ -1,0 +1,78 @@
+@import '../assets/styles/variables.scss';
+
+.ab-content {
+    background-color: $lightbg;
+    width: 100%;
+    position: relative;
+    padding: 130px 0;
+    .abc-wrapper{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 80px;
+        .abc-caption{
+            width: 35%;
+            p{
+                color: $dark;
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+
+        .abc-content {
+            width: 65%;
+
+            p {
+                color: $dark;
+                font-size: 3rem;
+                line-height: 1.4;
+                margin-bottom: 40px;
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .abc-images {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .ab-content {
+        padding: 60px 0;
+    }
+    .ab-content .abc-wrapper{
+        padding-bottom: 60px;
+        flex-direction: column;
+    }
+    .ab-content .abc-wrapper .abc-content[data-v-e2065507]{
+        width: 100%;
+        
+    }
+
+    .ab-content .abc-wrapper .abc-content p {
+        padding: 15px 0 0;
+        margin-bottom: 15px;
+    }
+
+    .ab-content .abc-images {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .ab-content {
+        padding: 60px 0;
+    }
+
+    .ab-content .abc-wrapper .abc-content p {
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+}
+

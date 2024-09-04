@@ -1,0 +1,47 @@
+@import '../assets/styles/variables.scss';
+
+.contact-hero {
+    width: 100%;
+    position: relative;
+    .ch-title {
+        text-align: center;
+        min-height: 40rem;
+        padding-top: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: $dark;
+            font-weight: 300;
+            font-size: 10rem;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .contact-hero {
+        width: 100%;
+        position: relative;
+        .ch-title {
+            text-align: center;
+            min-height: 40rem;
+            padding-top: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                color: $dark;
+                font-weight: 300;
+                font-size: 8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+
+}
+
