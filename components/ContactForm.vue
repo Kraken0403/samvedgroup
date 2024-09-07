@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="cf-form">
-          <form name="contact" method="POST" data-netlify="true" @submit="handleSubmit" netlify>
+          <form name="contact" @submit="handleSubmit" netlify>
             <!-- Hidden field to specify the form name -->
             <input type="hidden" name="form-name" value="contact" />
 
@@ -54,22 +54,9 @@ const formRef = ref(null);
 
 const handleSubmit = (event) => {
   event.preventDefault(); // Prevent the default form submission behavior
-
   const form = formRef.value;
-  const formData = new FormData(form);
 
-  fetch('/', {
-    method: 'POST',
-    body: formData,
-  })
-    .then(() => {
-      alert('Form submitted successfully!');
-      form.reset(); // Reset form fields
-    })
-    .catch((error) => {
-      console.error('Error submitting the form:', error);
-      alert('There was an error submitting the form. Please try again.');
-    });
+
 };
 </script>
 
