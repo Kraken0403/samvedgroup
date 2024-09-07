@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="cf-form">
-          <form name="contact" method="POST" data-netlify="true" @submit="handleSubmit">
+          <form name="contact" method="POST" data-netlify="true" @submit="handleSubmit" netlify>
             <!-- Hidden field to specify the form name -->
             <input type="hidden" name="form-name" value="contact" />
 
@@ -37,7 +37,8 @@
               <input type="email" name="email" placeholder="Email" required />
               <input type="tel" name="num" placeholder="Mobile Number" required />
               <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
-              <Button buttonText="Submit" type="submit"/>
+              <!-- <Button buttonText="Submit" type="submit"/> -->
+              <button type="submit">Submit</button>
             </div>
           </form>
         </div>
