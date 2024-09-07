@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="cf-form">
-          <form name="contact" @submit="handleSubmit" netlify>
+          <form name="contact" @submit="handleSubmit" method="POST" netlify="true">
             <!-- Hidden field to specify the form name -->
             <input type="hidden" name="form-name" value="contact" />
 
@@ -53,11 +53,20 @@ import { ref } from 'vue';
 const formRef = ref(null);
 
 const handleSubmit = (event) => {
-  event.preventDefault(); // Prevent the default form submission behavior
+  event.preventDefault();
+
   const form = formRef.value;
-
-
+  const formData = new FormData(form);
+            
+  fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+  })
+      .then(() => alert("Thank you for your submission"))
+      .catch((error) => alert(error));
 };
+
 </script>
 
 <style lang="scss" src="./ContactForm.scss" scoped></style>
