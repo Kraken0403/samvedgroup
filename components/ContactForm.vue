@@ -27,18 +27,19 @@
           </div>
         </div>
         <div class="cf-form">
-          <form ref="formRef" name="contact" @submit="handleSubmit" method="POST" netlify>
+          <form ref="formRef" @submit.prevent="submitForm">
             <!-- Hidden field to specify the form name -->
             <input type="hidden" name="form-name" value="contact" />
 
             <div class="form-group">
               <h2>Fill up the form</h2>
-              <input type="text" name="name" placeholder="Name" required />
-              <input type="email" name="email" placeholder="Email" required />
-              <input type="tel" name="num" placeholder="Mobile Number" required />
-              <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
-              <!-- <Button buttonText="Submit" type="submit"/> -->
-              <input type="submit" className="submit-btn" value="Submit" />
+              <input type="text" name="name" v-model="form.name" placeholder="Name" required />
+              <input type="email" name="email" v-model="form.email" placeholder="Email" required />
+              <input type="tel" name="num" v-model="form.num" placeholder="Mobile Number" required />
+              <textarea name="message" v-model="form.message" cols="30" rows="10" placeholder="Message" required></textarea>
+              <input type="submit" class="submit-btn" value="Submit" />
+              <p v-if="result" class="result">{{ result }}</p>
+
             </div>
           </form>
         </div>
@@ -50,31 +51,53 @@
 <script setup>
 import { ref } from 'vue';
 
-const formRef = ref(null);
+const form = ref({
+  access_key: "d269f5b0-7525-4d86-b3be-8f1d7d5ecb08",
+  subject: "New Submission from Samved Group Contact Page",
+  name: "",
+  email: "",
+  num: "",
+  message: "",
+});
 
-const handleSubmit = (event) => {
-  event.preventDefault(); // Prevent the default form submission behavior
+const result = ref("");
+const status = ref("");
 
-  const form = formRef.value;
-  if (!form) {
-    console.error('Form reference is null');
-    return;
-  }
-
-  const formData = new FormData(form);
-
-  fetch('/', {
-    method: 'POST',
-    body: formData,
-  })
-    .then(() => {
-      alert('Form submitted successfully!');
-      form.reset(); // Reset form fields
-    })
-    .catch((error) => {
-      console.error('Error submitting the form:', error);
-      alert('There was an error submitting the form. Please try again.');
+const submitForm = async () => {
+  result.value = "Please wait...";
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form.value),
     });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      result.value = "Form submitted successfully!";
+      status.value = "success";
+    } else {
+      result.value = data.message || "Error submitting form.";
+      status.value = "error";
+    }
+  } catch (error) {
+    console.error(error);
+    result.value = "Something went wrong!";
+    status.value = "error";
+  } finally {
+    // Reset form after submission
+    form.value.name = "";
+    form.value.email = "";
+    form.value.num = "";
+    form.value.message = "";
+
+    // Clear result and status after 5 seconds
+    setTimeout(() => {
+      result.value = "";
+      status.value = "";
+    }, 5000);
+  }
 };
 </script>
 
