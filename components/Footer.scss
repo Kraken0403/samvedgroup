@@ -5,7 +5,6 @@
     background-color: $white;
     height: 60rem;
     position: relative;
-    z-index: -1;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     &-wrapper{
         width: 100%;
@@ -14,6 +13,12 @@
     h1 {
         color: $white;
         font-size: 8rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $dark;
+        font-size: 2.2rem;
     }
 
     &-main {

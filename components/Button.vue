@@ -1,10 +1,10 @@
 <template>
     <div class="custom-button">
-        <NuxtLink :to="link" ref="buttonLink" :style="{ color: linkColor }">
+        <a :href="link" ref="buttonLink" :style="{ color: linkColor }">
             <span class="circle" :style="{ backgroundColor: linkColor }"></span>
             <span class="text">{{ buttonText }}</span>
             <!-- <span class="line"></span> -->
-        </NuxtLink>
+        </a>
     </div>
 </template>
 

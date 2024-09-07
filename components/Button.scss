@@ -32,11 +32,11 @@
         span.text {
             margin-left: 22px;
             transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-
+            cursor: pointer;
         }
         span.circle {
             transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-            
+            cursor: pointer;
             position: absolute;
             top: 50%;
             transform: translate(-50%, -50%);

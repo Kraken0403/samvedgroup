@@ -3,7 +3,7 @@
         <div class="container-wide">
             <div class="upcoming-wrapper">
                 <div class="bg-img-wrapper">
-                    <img class="bg-img" src="../assets/images/entry.png" alt="">
+                    <img class="bg-img" src="../assets/images/landscape.jpg" alt="">
                 </div>
                 <div class="upr-caption">
                     <span class="circle"></span>

@@ -5,13 +5,13 @@
                 <div class="testimonial-image-wrapper">
                     <div class="testimonial-big-image">
                         <div data-scroll data-scroll-speed="-2.2">
-                            <img src="../assets/images/entry.png" alt="">
+                            <img src="../assets/images/garden.jpg" alt="">
                         </div>
                     </div>
 
                     <div class="testimonial-small-image">
                         <div data-scroll data-scroll-speed="-2.2">
-                            <img src="../assets/images/balcony.png"  alt="">
+                            <img src="../assets/images/22.jpg"  alt="">
                         </div>
                     </div>
                 </div>

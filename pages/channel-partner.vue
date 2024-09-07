@@ -2,6 +2,7 @@
     <div>
         <Header logoImage="/logo.png" hamburgerColor="#111111"/>
         <ContactHero title="Channel Partner"/>
+        <Whatsapp />
         <CpContent />
         <Footer />
     </div>

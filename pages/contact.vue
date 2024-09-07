@@ -2,6 +2,7 @@
     <div>
         <Header logoImage="/logo.png" hamburgerColor="#111111"/>
         <ContactHero title="Get in touch with us"/>
+        <Whatsapp />
         <ContactForm />
         <Footer />
     </div>

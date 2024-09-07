@@ -2,6 +2,7 @@
     <div>
         <Header />
         <ProjectHero />
+        <Whatsapp />
         <ProjectContent />
         <Testimonial />
         <TestimonialCarousel />

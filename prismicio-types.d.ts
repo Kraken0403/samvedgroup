@@ -330,6 +330,26 @@ export interface ProjectIntroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   project_vision: prismic.RichTextField;
+
+  /**
+   * Google Map field in *ProjectIntro → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_intro.default.primary.google_map
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  google_map: prismic.LinkField;
+
+  /**
+   * Brochure field in *ProjectIntro → Default → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_intro.default.primary.brochure
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  brochure: prismic.LinkToMediaField;
 }
 
 /**

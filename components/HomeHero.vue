@@ -12,9 +12,17 @@
           </div>
           <div class="container-wide">
             <div class="hero-icons">
-              <Icon name="uil:instagram" style="color: white" />
-              <Icon name="uil:facebook" style="color: white" />
-              <Icon name="uil:linkedin" style="color: white" />
+              <a href="https://www.instagram.com/samvedgroup/">
+                <Icon name="uil:instagram" style="color: white" />
+              </a>
+              <!-- <Icon name="uil:facebook" style="color: white" /> -->
+              <a href="https://www.linkedin.com/in/samved-group-272299280/">
+                <Icon name="uil:linkedin" style="color: white" />
+              </a>
+              <a href="https://www.youtube.com/@samvedgroup">
+                <Icon name="uil:youtube" style="color: white" />
+
+              </a>
             </div>
           </div>
           
@@ -32,14 +40,14 @@
                     </swiper-slide>
                     <swiper-slide>
                         <div class="hero-card">
-                            <img src="../assets/images/balcony.png" alt="">
+                            <img src="../assets/images/office.jpg" alt="">
                             
                         </div>
                     </swiper-slide>
 
                     <swiper-slide>
                         <div class="hero-card">
-                            <img src="../assets/images/balcony.png" alt="">
+                            <img src="../assets/images/valley.jpg" alt="">
 
                         </div>
                     </swiper-slide>

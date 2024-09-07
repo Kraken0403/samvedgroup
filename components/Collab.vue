@@ -29,7 +29,7 @@
             
             
                 <div class="collab-image">
-                    <img src="../assets/images/entry.png" alt="">
+                    <img src="../assets/images/collab.jpg" alt="">
                 </div>
               
              

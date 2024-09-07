@@ -15,12 +15,13 @@
                     >
                         <swiper-slide >
                             <a href="#" class="pc-card ">
-                                <img src="../assets/images/sample1.png" alt="">
+                                <img src="../assets/images/amph.jpg" alt="">
                                 <h2>The Grasslands</h2>
                                 <div class="tags">
                                     <div class="tag">Residential</div>
                                     <div class="tag">Commercial</div>
-                                    <div class="tag">12,700 sq. yd.</div>
+                                    <div class="tag">4 & 3BHK</div>
+                                    <!-- <div class="tag">12,500 sq. yd.</div> -->
                                 </div>
                             </a>
                         </swiper-slide>
@@ -31,7 +32,11 @@
                                 <h2>Samved Dreams</h2>
                                 <div class="tags">
                                     <div class="tag">Residential</div>
-                                    <div class="tag">11,569 sq. yd</div>
+                                    <div class="tag">Commercial</div>
+                                    <div class="tag">2 & 3BHK</div>
+
+                                    <!-- <div class="tag">Residential</div> -->
+                                    <!-- <div class="tag">11,569 sq. yd</div> -->
                                 </div>
                                 
                             </a>
@@ -43,7 +48,9 @@
                                 <h2>Samved Green Valley</h2>
                                 <div class="tags">
                                     <div class="tag">Residential</div>
-                                    <div class="tag">11,162 sq. yd</div>
+                                    <div class="tag">Commercial</div>
+                                    <div class="tag">2 & 3BHK</div>
+                                    <!-- <div class="tag">11,162 sq. yd</div> -->
                                 </div>
                               
                             </a>
@@ -55,7 +62,8 @@
                                 <h2>Radhe Infinity Residential</h2>
                                 <div class="tags">
                                     <div class="tag">Residential</div>
-                                    <div class="tag">16,825 sq. yd.</div>
+                                    <div class="tag">2 & 3BHK</div>
+                                    <!-- <div class="tag">16,825 sq. yd.</div> -->
                                 </div>
                               
                             </a>
@@ -67,12 +75,12 @@
                                 <h2>Radhe Infinity Commercial</h2>
                                 <div class="tags">
                                     <div class="tag">Commercial</div>
-                                    <div class="tag">16,825 sq. yd.</div>
+                                    <!-- <div class="tag">16,825 sq. yd.</div> -->
                                 </div>
                               
                             </a>
                         </swiper-slide>
-                        <swiper-slide>
+                        <!-- <swiper-slide>
                             <a href="#" class="pc-card">
                                 
                                 <img src="../assets/images/urbania.jpg" alt="">
@@ -83,7 +91,8 @@
                                 </div>
                               
                             </a>
-                        </swiper-slide>                      
+                        </swiper-slide>
+                    -->
 
                     </swiper>
                 </div>

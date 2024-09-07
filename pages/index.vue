@@ -2,6 +2,7 @@
     <div>
         <Header />
         <HomeHero />
+        <Whatsapp />
         <HomeAbout />
         <Upcoming />
         <ProjectsCarousel />

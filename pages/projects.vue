@@ -1,6 +1,7 @@
 <template>
     <div>
         <Header logoImage="/logo.png" hamburgerColor="#111111"/>
+        <Whatsapp />
         <ProjectsMain />
         <Footer />
     </div>
