@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="cf-form">
-          <form ref="formRef" name="contact" @submit="handleSubmit" method="POST" netlify="true">
+          <form ref="formRef" name="contact" @submit="handleSubmit" method="POST" netlify>
             <!-- Hidden field to specify the form name -->
             <input type="hidden" name="form-name" value="contact" />
 
