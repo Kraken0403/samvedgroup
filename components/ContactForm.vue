@@ -37,7 +37,7 @@
               <input type="email" name="email" placeholder="Email" required />
               <input type="tel" name="num" placeholder="Mobile Number" required />
               <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
-              <Button buttonText="Submit" />
+              <Button buttonText="Submit" type="submit"/>
             </div>
           </form>
         </div>
