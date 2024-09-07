@@ -4,25 +4,32 @@
             <div class="row">
                 <div class="col-20 d-flex">
                     <div class="logo">
-                        <a href="/">
-                            <img :src="logoImage" alt="">
-                        </a>
+                        <NuxtLink to="/" target="_self">
+                            <img :src="logoImage" alt="Logo">
+                        </NuxtLink>
                     </div>
                 </div>
 
                 <div class="col-60 d-flex">
                     <div class="menu">
-                        
+                        <!-- Add your menu items here -->
                     </div>
                 </div>
 
                 <div class="col-20 d-flex audio-ham">
                     <div class="audio-wrapper">
                         <div class="audio-controls">
-                            <button @click="toggleMute" class="mute-unmute link">
+                            <button @click="toggleMute" class="mute-unmute link" :style="{color: hamburgerColor, borderColor: hamburgerColor}">
                                 <icon :name="isMuted ? 'mdi:volume-off' : 'mdi:volume-high'" />
                             </button>
                         </div>
+                    </div>
+                    <div class="phone-wrapper">
+                        <a href="tel:+919512447776">
+                            <button :style="{color: hamburgerColor, borderColor: hamburgerColor}">
+                                <Icon name="uil:phone" :style="{color: hamburgerColor}" />
+                            </button>
+                        </a>
                     </div>
                     <div class="hamburger-icon link" @click="toggleOverlay">
                         <div class="ham-span" :style="{ backgroundColor: hamburgerColor }" id="navLine1"></div>
@@ -30,34 +37,30 @@
                     </div>
                 </div>
             </div>
+
             <div class="overlay-bg" @click="toggleOverlay"></div>
             <div class="overlay-menu" ref="overlayMenu">
                 <div class="menu-items">
                     <div class="menu-item">
-                        <a href="./">Home</a>
+                        <NuxtLink to="/" target="_self">Home</NuxtLink>
                     </div>
                     <div class="menu-item">
-                        <a href="./projects">Projects</a>
+                        <NuxtLink to="/projects" target="_self">Projects</NuxtLink>
                     </div>
                     <div class="menu-item">
-                        <a href="./about">About Us</a>
+                        <NuxtLink to="/about" target="_self">About Us</NuxtLink>
                     </div>
                     <div class="menu-item">
-                        <a href="./contact">Contact Us</a>
+                        <NuxtLink to="/contact" target="_self">Contact Us</NuxtLink>
                     </div>
                     <div class="menu-item">
-                        <a href="./gallery">Gallery</a>
+                        <NuxtLink to="/channel-partner" target="_self">Channel Partner</NuxtLink>
                     </div>
-                    <div class="menu-item">
-                        <a href="./channel-partner">Channel Partner</a>
-                    </div>
-                    
                 </div>
             </div>
         </div>
     </div>
 </template>
-
 
 <script>
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -83,7 +86,6 @@ export default {
             isMenuOpen = !isMenuOpen;
             if (isMenuOpen) {
                 gsap.to("#navLine1", { y: 4, duration: 0.3 });
-                gsap.to("#navLine2", { opacity: 0, duration: 0.3 });
                 gsap.to("#navLine3", { y: -4, duration: 0.3 });
                 gsap.to(overlayMenu.value, {
                     right: 0,
@@ -94,9 +96,8 @@ export default {
                     document.querySelector('.overlay-bg').style.pointerEvents = "auto";
                 }});
             } else {
-                gsap.to("#navLine1", { rotation: 0, y: 0, duration: 0.3 });
-                gsap.to("#navLine2", { opacity: 1, duration: 0.3 });
-                gsap.to("#navLine3", { rotation: 0, y: 0, duration: 0.3 });
+                gsap.to("#navLine1", { y: 0, duration: 0.3 });
+                gsap.to("#navLine3", { y: 0, duration: 0.3 });
                 gsap.to(overlayMenu.value, {
                     right: '-100%',
                     duration: 0.5,

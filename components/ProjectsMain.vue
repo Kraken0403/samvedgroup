@@ -29,10 +29,10 @@
   const projects = [
     { id: 1, type: 'residential', title: 'The Grasslands', image: grasslands, link:"./project/thegrasslands" },
     { id: 2, type: 'residential', title: 'Samved Dreams', image: dreams, link:"./project/samveddreams" },
-    { id: 3, type: 'residential', title: 'Samved Green Valley', image: valley, link:"./project/samvedvalley" },
-    { id: 4, type: 'residential', title: 'Radhe Infinity Residential', image: reres, link:"./project/radheinfinityres" },
-    { id: 5, type: 'commercial', title: 'Radhe Infiniti Commercial', image: recomm, link:"./project/radheinfinitycomm"},
-    { id: 6, type: 'commercial', title: 'The Urbania', image: urbania, link:"./project/urbania" }
+    { id: 3, type: 'residential', title: 'Samved Green Valley', image: valley, link:"./project/greenvalley" },
+    { id: 4, type: 'residential', title: 'Radhe Infinity Residential', image: reres, link:"./project/radheinfinityresidential" },
+    { id: 5, type: 'commercial', title: 'Radhe Infiniti Commercial', image: recomm, link:"./project/radheinfinitycommercial"},
+    // { id: 6, type: 'commercial', title: 'The Urbania', image: urbania, link:"./project/urbania" }
     // ... more projects
   ];
   

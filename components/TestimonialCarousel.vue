@@ -16,13 +16,15 @@
 
                     <swiper-slide>
                         <div class="tc-card">
-                            <p>Our vision is to be at the forefront of  innovation,  shaping a world where every structure is a work of art, every space is  an experience, and every project counts. Join us on this journey as we  embark on an exciting adventure to make dreams a reality. Together, we  will build, craft, and dream of a better, more beautiful future for all.</p>
-                        </div>
+                            <p>Choosing Samved Group for our real estate needs was one of the best decisions we've made. Their commitment to quality and attention to detail are unmatched. From the initial consultation to the final handover, the entire process was seamless and professional. The homes are not just beautifully designed but also built with the highest standards of craftsmanship. We couldn't be happier with our new home and the exceptional service provided by Samved Group.</p>
+                            <span>- Hardik A -</span>
+                          </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="tc-card">
-                            <p>Our vision is to be at the forefront of  innovation,  shaping a world where every structure is a work of art, every space is  an experience, and every project counts. Join us on this journey as we  embark on an exciting adventure to make dreams a reality. Together, we  will build, craft, and dream of a better, more beautiful future for all.</p>
-                        </div>
+                            <p>Samved Group has truly exceeded our expectations. Their visionary approach to real estate development is evident in every project they undertake. The blend of modern design and practical functionality in their properties is impressive. The team's dedication to customer satisfaction and their ability to deliver on promises is remarkable. We are proud to be part of the Samved community and highly recommend them to anyone looking for quality and innovation in real estate.</p>
+                            <span>- Shruti Prajapati -</span>
+                          </div>
                     </swiper-slide>
                         
                     </swiper>

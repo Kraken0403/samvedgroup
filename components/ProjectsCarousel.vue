@@ -14,7 +14,7 @@
                     
                     >
                         <swiper-slide >
-                            <a href="#" class="pc-card ">
+                            <a href="./project/thegrasslands" class="pc-card ">
                                 <img src="../assets/images/amph.jpg" alt="">
                                 <h2>The Grasslands</h2>
                                 <div class="tags">
@@ -26,7 +26,7 @@
                             </a>
                         </swiper-slide>
                         <swiper-slide >
-                            <a href="#" class="pc-card ">
+                            <a href="./project/samveddreams" class="pc-card ">
                                
                                 <img src="../assets/images/dreams.jpg" alt="">
                                 <h2>Samved Dreams</h2>
@@ -42,7 +42,7 @@
                             </a>
                         </swiper-slide>
                         <swiper-slide >
-                            <a href="#" class="pc-card">
+                            <a href="./project/greenvalley" class="pc-card">
                                 
                                 <img src="../assets/images/valley.jpg" alt="">
                                 <h2>Samved Green Valley</h2>
@@ -56,7 +56,7 @@
                             </a>
                         </swiper-slide>
                         <swiper-slide >
-                            <a href="#" class="pc-card">
+                            <a href="./project/radheinfinityresidential" class="pc-card">
                                 
                                 <img src="../assets/images/re-res.jpg" alt="">
                                 <h2>Radhe Infinity Residential</h2>
@@ -69,7 +69,7 @@
                             </a>
                         </swiper-slide>
                         <swiper-slide >
-                            <a href="#" class="pc-card ">
+                            <a href="./project/radheinfinitycommercial" class="pc-card ">
                                 
                                 <img src="../assets/images/re-comm.jpg" alt="">
                                 <h2>Radhe Infinity Commercial</h2>

@@ -58,7 +58,7 @@
           </div>
   
           <div class="book-now">
-            <h1>Book Now</h1>
+            <h1 >Book Now</h1>
           </div>
         </div>
       </div>
