@@ -1,0 +1,68 @@
+@import '../assets/styles/variables.scss';
+
+.booking-form-container {
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 1rem 0 10rem 0;
+    // background-color: #f9f9f9;
+    border-radius: 8px;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      input {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 2rem;
+        color: #111111;
+        outline: none;
+        background-color: #F5F5F5;
+        border: 0px;
+        border-radius: 0px;
+        margin-bottom: 20px;
+      }
+  
+      button {
+        padding: 15px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: $dark;
+        color: #fff;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  
+@media only screen and (max-width: 768px) {
+    .booking-form-container form{
+        width: 100%;
+    }
+    .booking-form-container{
+        padding:0 25px 60px;
+    }
+    .contact-form .cf-wrapper .cf-form .form-group a{
+        margin: 0;
+    }
+
+    .contact-form .cf-wrapper .cf-form .form-group .text {
+
+    }
+
+    
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+ 
+
+}
+

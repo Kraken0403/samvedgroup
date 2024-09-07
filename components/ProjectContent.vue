@@ -1,5 +1,4 @@
 <template>
-    
     <div v-if="data" class="pc" :style="{ backgroundColor: data.slices[0].primary.color }" data-scroll-section>
       <div class="container-wide">
         <div class="pc-wrapper">
@@ -39,9 +38,7 @@
               <h2>The Vision for {{ data.slices[0].primary.project_title }}</h2>
               <p>{{ data.slices[1].primary.project_vision[0]?.text }}</p>
               <div class="pca-map-buttons">
-             
                 <Button :link="data.slices[1].primary.google_map.url" buttonText="Visit Us" linkColor="#111111" />
-                
                 <Button :link="data.slices[1].primary.brochure.url" buttonText="Download Brochure" linkColor="#111111" />
               </div>
             </div>
@@ -58,63 +55,43 @@
           </div>
   
           <div class="book-now">
-            <h1 >Book Now</h1>
+            <NuxtLink :to="{ path: '/book-project', query: { projectTitle: encodeURIComponent(data.slices[0].primary.project_title) } }">
+              <h1>Book Now</h1>
+            </NuxtLink>
           </div>
         </div>
       </div>
-  
-      <!-- Lightbox modal -->
-     
     </div>
-      
- 
   </template>
   
-
-<script setup>
-import { defineProps, ref, onMounted } from 'vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-
-const props = defineProps({
-  data: {
-    type: Object,
-    required: true,
-  },
-});
-
-const isLightboxOpen = ref(false);
-const lightboxVideoUrl = ref('');
-
-onMounted(() => {
-  console.log('ProjectContent data:', props.data);
-});
-
-const openLightbox = () => {
-  isLightboxOpen.value = true;
-  lightboxVideoUrl.value = 'https://www.youtube.com/embed/YOUR_VIDEO_ID'; // Replace with your YouTube video URL
-};
-
-const closeLightbox = () => {
-  isLightboxOpen.value = false;
-  lightboxVideoUrl.value = ''; // Stop video playback by resetting the URL
-};
-
-// Swiper configuration
-const swiperOptions = {
-  modules: [Navigation, Pagination],
-  slidesPerView: 4,
-  spaceBetween: 50,
-  navigation: true,
-  pagination: {
-    clickable: true,
-  },
-};
-</script>
-
-<style lang="scss" src="./ProjectContent.scss" scoped>
-
-</style>
+  <script setup>
+  import { ref } from 'vue';
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import { Navigation, Pagination } from 'swiper/modules';
+  
+  const props = defineProps({
+    data: {
+      type: Object,
+      required: true,
+    },
+  });
+  
+  // Swiper configuration
+  const swiperOptions = {
+    modules: [Navigation, Pagination],
+    slidesPerView: 4,
+    spaceBetween: 50,
+    navigation: true,
+    pagination: {
+      clickable: true,
+    },
+  };
+  </script>
+  
+  <style lang="scss" src="./ProjectContent.scss" scoped>
+  /* Modal styles */
+  </style>
+  
