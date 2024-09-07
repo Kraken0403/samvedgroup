@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="cf-form">
-          <form name="contact" @submit="handleSubmit" method="POST" netlify="true">
+          <form ref="formRef" name="contact" @submit="handleSubmit" method="POST" netlify="true">
             <!-- Hidden field to specify the form name -->
             <input type="hidden" name="form-name" value="contact" />
 
@@ -38,7 +38,7 @@
               <input type="tel" name="num" placeholder="Mobile Number" required />
               <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
               <!-- <Button buttonText="Submit" type="submit"/> -->
-              <button type="submit">Submit</button>
+              <input type="submit" className="submit-btn" value="Submit" />
             </div>
           </form>
         </div>
@@ -53,20 +53,29 @@ import { ref } from 'vue';
 const formRef = ref(null);
 
 const handleSubmit = (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Prevent the default form submission behavior
 
   const form = formRef.value;
-  const formData = new FormData(form);
-            
-  fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-  })
-      .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
-};
+  if (!form) {
+    console.error('Form reference is null');
+    return;
+  }
 
+  const formData = new FormData(form);
+
+  fetch('/', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(() => {
+      alert('Form submitted successfully!');
+      form.reset(); // Reset form fields
+    })
+    .catch((error) => {
+      console.error('Error submitting the form:', error);
+      alert('There was an error submitting the form. Please try again.');
+    });
+};
 </script>
 
 <style lang="scss" src="./ContactForm.scss" scoped></style>
