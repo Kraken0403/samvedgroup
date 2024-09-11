@@ -24,22 +24,7 @@
                                 </div>
                             </a>
                         </swiper-slide>
-                        <swiper-slide >
-                            <a href="./project/samveddreams" class="pc-card ">
-                               
-                                <img src="../assets/images/dreams.jpg" alt="">
-                                <h2>Samved Dreams</h2>
-                                <div class="tags">
-                                    <div class="tag">Residential</div>
-                                    <div class="tag">Commercial</div>
-                                    <div class="tag">2 & 3 BHK</div>
-
-                                    <!-- <div class="tag">Residential</div> -->
-                                    <!-- <div class="tag">11,569 sq. yd</div> -->
-                                </div>
-                                
-                            </a>
-                        </swiper-slide>
+                       
                         
                         <swiper-slide >
                             <a href="./project/radheinfinityresidential" class="pc-card">
@@ -64,6 +49,22 @@
                                     <!-- <div class="tag">16,825 sq. yd.</div> -->
                                 </div>
                               
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide >
+                            <a href="./project/samveddreams" class="pc-card ">
+                               
+                                <img src="../assets/images/dreams.jpg" alt="">
+                                <h2>Samved Dreams</h2>
+                                <div class="tags">
+                                    <div class="tag">Residential</div>
+                                    <div class="tag">Commercial</div>
+                                    <div class="tag">2 & 3 BHK</div>
+
+                                    <!-- <div class="tag">Residential</div> -->
+                                    <!-- <div class="tag">11,569 sq. yd</div> -->
+                                </div>
+                                
                             </a>
                         </swiper-slide>
                         <swiper-slide >

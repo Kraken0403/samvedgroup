@@ -35,9 +35,9 @@
 //  import sampleThree from '../assets/images/sample2.png'
   const projects = [
     { id: 1, type: 'residential', title: 'The Grasslands', image: grasslands, link:"./project/thegrasslands", config: '4 & 3 BHK' },
-    { id: 2, type: 'residential', title: 'Samved Dreams', image: dreams, link:"./project/samveddreams", config: '2 & 3 BHK' },
-    { id: 3, type: 'residential', title: 'Radhe Infinity Residential', image: reres, link:"./project/radheinfinityresidential", config: '2 & 3 BHK'  },
-    { id: 4, type: 'commercial', title: 'Radhe Infinity Commercial', image: recomm, link:"./project/radheinfinitycommercial" },
+    { id: 2, type: 'residential', title: 'Radhe Infinity Residential', image: reres, link:"./project/radheinfinityresidential", config: '2 & 3 BHK'  },
+    { id: 3, type: 'commercial', title: 'Radhe Infinity Commercial', image: recomm, link:"./project/radheinfinitycommercial" },
+    { id: 4, type: 'residential', title: 'Samved Dreams', image: dreams, link:"./project/samveddreams", config: '2 & 3 BHK' },
     { id: 5, type: 'residential', title: 'Samved Green Valley', image: valley, link:"./project/greenvalley", config: '2 & 3 BHK'  },
     // { id: 6, type: 'commercial', title: 'The Urbania', image: urbania, link:"./project/urbania" }
     // ... more projects

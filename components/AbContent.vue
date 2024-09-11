@@ -13,7 +13,7 @@
             </div>
             <div class="abc-images">
                 <div class="abc-image">
-                    <img src="../assets/images/entry.png" alt="">
+                    <img src="../assets/images/balcony.png" alt="">
                 </div>
                 <div class="abc-image">
                     <img src="../assets/images/balcony.png" alt="">
