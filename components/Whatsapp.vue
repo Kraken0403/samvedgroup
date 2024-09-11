@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="whatsapp-button">
                 <a href="https://api.whatsapp.com/send?phone=919512447776&text=Hello!" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                    <img src="../assets/images/wa.png" alt="WhatsApp">
                 </a>
             </div>
         </div>
@@ -35,6 +35,7 @@ export default {
         height: auto;
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background: #f5f5f5;
         transition: all 0.3s ease;
     }
 

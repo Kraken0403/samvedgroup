@@ -20,7 +20,6 @@
                                 <div class="tags">
                                     <div class="tag">Residential</div>
                                     <div class="tag">Commercial</div>
-                                    <div class="tag">4 & 3BHK</div>
                                     <!-- <div class="tag">12,500 sq. yd.</div> -->
                                 </div>
                             </a>
@@ -33,7 +32,7 @@
                                 <div class="tags">
                                     <div class="tag">Residential</div>
                                     <div class="tag">Commercial</div>
-                                    <div class="tag">2 & 3BHK</div>
+                                    <div class="tag">2 & 3 BHK</div>
 
                                     <!-- <div class="tag">Residential</div> -->
                                     <!-- <div class="tag">11,569 sq. yd</div> -->
@@ -41,20 +40,7 @@
                                 
                             </a>
                         </swiper-slide>
-                        <swiper-slide >
-                            <a href="./project/greenvalley" class="pc-card">
-                                
-                                <img src="../assets/images/valley.jpg" alt="">
-                                <h2>Samved Green Valley</h2>
-                                <div class="tags">
-                                    <div class="tag">Residential</div>
-                                    <div class="tag">Commercial</div>
-                                    <div class="tag">2 & 3BHK</div>
-                                    <!-- <div class="tag">11,162 sq. yd</div> -->
-                                </div>
-                              
-                            </a>
-                        </swiper-slide>
+                        
                         <swiper-slide >
                             <a href="./project/radheinfinityresidential" class="pc-card">
                                 
@@ -62,7 +48,7 @@
                                 <h2>Radhe Infinity Residential</h2>
                                 <div class="tags">
                                     <div class="tag">Residential</div>
-                                    <div class="tag">2 & 3BHK</div>
+                                    <div class="tag">2 & 3 BHK</div>
                                     <!-- <div class="tag">16,825 sq. yd.</div> -->
                                 </div>
                               
@@ -76,6 +62,20 @@
                                 <div class="tags">
                                     <div class="tag">Commercial</div>
                                     <!-- <div class="tag">16,825 sq. yd.</div> -->
+                                </div>
+                              
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide >
+                            <a href="./project/greenvalley" class="pc-card">
+                                
+                                <img src="../assets/images/valley.jpg" alt="">
+                                <h2>Samved Green Valley</h2>
+                                <div class="tags">
+                                    <div class="tag">Residential</div>
+                                    <div class="tag">Commercial</div>
+                                    <div class="tag">2 & 3 BHK</div>
+                                    <!-- <div class="tag">11,162 sq. yd</div> -->
                                 </div>
                               
                             </a>

@@ -13,6 +13,21 @@
         //     }
         // }
     }
+    .tags{
+        display: flex;
+        gap: 15px 0;
+    }
+    p.tag{
+        font-size: 16px;
+        // font-weight: 600;
+        background-color: $lightbgtwo;
+        width: fit-content;
+        padding: 3px 5px;
+        border-radius: 3px;
+        color: $dark;
+        margin-right: 10px;
+        text-transform: capitalize;
+    }
     .project-card-image-wrapper {
         height: 45rem;
         width: 100%;
@@ -33,7 +48,7 @@
     .projects-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 15px;
+        gap: 40px 15px;
     }
 
     .project-card-title {
