@@ -6,8 +6,8 @@
                     <div class="col-50 col-100">
                         <div class="ha-content">
                             <h2>Creators of your Dreams and Legacy </h2>
-                            <p>We Have Been Developing Residential And Commercial Spaces Since Decades  Before Samved Group Was What It Is Today. We Already Have Well-Settled  Communities Of Residents And Businesses At Our Earlier Projects, Which  Laid The Foundation And Vision For Our Future Developments.</p>
-                            <p>Building Futures. We are more than just builders; we  are builders of tomorrow. We know that every design and construction  project has the potential to influence future generations.</p>
+                            <p>For decades, we’ve been more than developers—we’ve been the builders of thriving communities and dynamic commercial hubs, long before Samved Group became the powerhouse it is today. Our earlier projects, now vibrant neighborhoods and flourishing business centers, laid the foundation for the visionary developments we continue to build. These spaces are more than just buildings; they are the roots of a legacy that grows with every new project.</p>
+                            <p>Crafting the Future. At Samved Group, we don’t just build for the present—we shape the future. Every structure is a step toward a world that reflects innovation, sustainability, and progress. We believe that each project is an opportunity to create spaces that resonate with future generations, turning today’s vision into tomorrow’s legacy. We are the builders of dreams, forging paths to a brighter, more sustainable tomorrow.</p>
                             <div class="ha-content-btn">
                                 <Button buttonText="About Us" linkColor="#111111" link="/about"/>
                             </div>
