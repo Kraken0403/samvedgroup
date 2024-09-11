@@ -31,7 +31,7 @@
     { id: 2, type: 'residential', title: 'Samved Dreams', image: dreams, link:"./project/samveddreams" },
     { id: 3, type: 'residential', title: 'Samved Green Valley', image: valley, link:"./project/greenvalley" },
     { id: 4, type: 'residential', title: 'Radhe Infinity Residential', image: reres, link:"./project/radheinfinityresidential" },
-    { id: 5, type: 'commercial', title: 'Radhe Infiniti Commercial', image: recomm, link:"./project/radheinfinitycommercial"},
+    { id: 5, type: 'commercial', title: 'Radhe InfinitY Commercial', image: recomm, link:"./project/radheinfinitycommercial"},
     // { id: 6, type: 'commercial', title: 'The Urbania', image: urbania, link:"./project/urbania" }
     // ... more projects
   ];

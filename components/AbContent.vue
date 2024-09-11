@@ -7,8 +7,8 @@
                 </div>
 
                 <div class="abc-content">
-                    <p>When You Buy A Property At Samved Group It Is Not Just A Functional Home Or Retail Space. It Is A Bold Statement About Who You Are And What You Do. Samved Properties, With Their Designs, Locations, Architecture, And Functional Amenities, Are Meant For Those Who Believe That Their Address Matters.</p>
-                    <p>With An Intense Eagerness To Innovate, Deliver Value, And Build Customer Satisfaction, Our Founders, Mr. JigneshBhai Madhubhai Patel, Mr. PrakashBhai NarayanBhai Patel, And Co-Founder Mr. Rachit PrakashBhai Patel Have Come A Long Way In Building Samved Group, A Reputed Brand In The Real Estate And Construction Industries Of Gandhinagar.</p>
+                    <p>At Samved Group, we don't just build homes or retail spaces; we create experiences that reflect who you are and what you stand for. Our properties go beyond the functional—each one is a canvas where visionary design meets iconic locations, where cutting-edge architecture blends with thoughtful amenities. For those who know the value of an address, Samved properties make a statement: this is where purpose meets prestige.</p>
+                    <p>Driven by a relentless passion for innovation, our founders—Mr. Jignesh Madhubhai Patel, Mr. Prakash Narayanbhai Patel, and chairman Mr. Rachit Prakashbhai Patel—have crafted Samved Group into a trusted name in Gandhinagar’s real estate landscape. With a commitment to delivering value and building meaningful relationships, they have transformed Samved into a brand synonymous with excellence in construction and customer satisfaction.</p>
                 </div>
             </div>
             <div class="abc-images">

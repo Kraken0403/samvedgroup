@@ -7,7 +7,7 @@
                         <p>Samved Group Team</p>
                     </div>
                     <div class="abt-content">
-                        <p>At Samved Group, We Use Innovation And Creativity, Professionalism, And Unique Skill Sets To Establish A Better Brand Value And Achieve An Edge Over Our Competitors. While Staying Committed To Delivering An Experience That Improves The Quality Of Life For All Our Customers, We Unify Quality, Aesthetics, And Green Environs To Create The Spaces They Deserve. We Strive To Make A Difference In The World By Raising The Quality Bar To Exceed Customer Expectations.</p>
+                        <p>At Samved Group, we redefine living and commercial spaces by blending innovation with creativity, all while upholding the highest standards of professionalism. Our commitment is to craft environments where quality, aesthetics, and sustainability come together to enhance the lives of our customers. Every project is a reflection of our passion for excellence, where we don't just meet expectations—we exceed them. By harmonizing modern design with eco-consciousness, we create spaces that inspire and resonate, setting a new benchmark for the industry and transforming the way our clients experience their surroundings.</p>
                     </div>
                 </div>
                 <div class="abt-photos">

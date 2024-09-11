@@ -16,16 +16,45 @@
 
                     <swiper-slide>
                         <div class="tc-card">
-                            <p>Choosing Samved Group for our real estate needs was one of the best decisions we've made. Their commitment to quality and attention to detail are unmatched. From the initial consultation to the final handover, the entire process was seamless and professional. The homes are not just beautifully designed but also built with the highest standards of craftsmanship. We couldn't be happier with our new home and the exceptional service provided by Samved Group.</p>
-                            <span>- Hardik A -</span>
+                            <p>Such A very Good location
+                              Very Good Landscaping In kudasan area
+                              Premium Landscaping Work From High profesonal Landscaping Designer
+                              Project by Experience Developer since last 25years of work in Gandhinagar City
+                            </p>
+                            <span>- Mukund Makwana -</span>
+                            <span> 5/5 stars </span>
                           </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="tc-card">
-                            <p>Samved Group has truly exceeded our expectations. Their visionary approach to real estate development is evident in every project they undertake. The blend of modern design and practical functionality in their properties is impressive. The team's dedication to customer satisfaction and their ability to deliver on promises is remarkable. We are proud to be part of the Samved community and highly recommend them to anyone looking for quality and innovation in real estate.</p>
-                            <span>- Shruti Prajapati -</span>
+                            <p>Best location & premium project in kudasan, Gandhinagar.</p>
+                            <span>- Jigar Raval -</span>
+                            <span> 5/5 stars </span>
+
                           </div>
                     </swiper-slide>
+
+                    <swiper-slide>
+                        <div class="tc-card">
+                            <p>Great project in kudasan.</p>
+                            <span>- Patel Suhas -</span>
+                            <span> 5/5 stars </span>
+
+                          </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
+                        <div class="tc-card">
+                            <p>Its Grand luxurious project in kudasan Area.
+                              Different type of amenities And luxurious 4 bhk & 3 bhk & shops
+                            </p>
+                            <span>- Krupa -</span>
+                            <span> 5/5 stars </span>
+
+                          </div>
+                    </swiper-slide>
+
+
                         
                     </swiper>
                 </div>
