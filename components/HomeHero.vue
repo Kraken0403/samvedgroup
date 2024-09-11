@@ -71,7 +71,7 @@
     },
     setup() {
       onMounted(() => {
-        const textArray = ["Legacy", "Comfort", "Excellence"];
+        const textArray = ["Landmarks", "Excellence", "Dreams", "Future", "Memories"];
         const replacingText = document.querySelector('.words span');
         let currentIndex = 0;
 
