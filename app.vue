@@ -13,7 +13,6 @@ import { useRouter } from 'vue-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Preloader from '~/components/Preloader.vue';
-import LocomotiveScroll from 'locomotive-scroll';
 import MouseFollower from 'mouse-follower';
 import { useNuxtApp } from '#app';
 
