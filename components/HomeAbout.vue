@@ -16,7 +16,7 @@
                     <div class="col-50 col-100">
                         <div class="ha-image" >
                             <div class="ha-image-wrapper" data-scroll data-scroll-speed="-1.1">
-                                <img src="../assets/images/shop.jpg" alt="">
+                                <img src="../assets/images/rp-1.png" alt="">
 
                             </div>
                         </div>
