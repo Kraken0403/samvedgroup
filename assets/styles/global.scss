@@ -96,6 +96,8 @@ body.is-loading {
   [data-scroll-container] {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: fit-content;
   }
   
   [data-scroll] {

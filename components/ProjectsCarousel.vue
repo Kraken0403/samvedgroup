@@ -1,5 +1,5 @@
 <template>
-    <div class="pc" data-scroll-section>
+    <div class="pc" data-scroll data-scroll-section>
         <div class="container-wide">
             <div class="pc-wrapper">
                 <div class="pc-head">

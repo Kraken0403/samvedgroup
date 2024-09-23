@@ -1,5 +1,5 @@
 <template>
-    <div class="tc" data-scroll-section>
+    <div class="tc" data-scroll data-scroll-section>
         <div class="container-wide">
             <div class="tc-wrapper">
                 <div class="tc-head">

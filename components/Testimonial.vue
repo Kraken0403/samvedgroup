@@ -1,5 +1,5 @@
 <template>
-    <div class="testimonial" data-scroll-section>
+    <div class="testimonial" data-scroll data-scroll-section>
         <div class="container-wide">
             <div class="testimonial-wrapper">
                 <div class="testimonial-image-wrapper">

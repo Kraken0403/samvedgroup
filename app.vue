@@ -1,5 +1,5 @@
 <template>
-  <div data-scroll-container>
+  <div>
     <NuxtLayout>
       <Preloader v-if="isPageLoading" />
       <NuxtPage />
@@ -83,16 +83,16 @@ onMounted(() => {
     isPageLoading.value = true;
 
     window.addEventListener('load', () => {
-      initLocomotiveScroll();
+      // initLocomotiveScroll();
 
-  // Remove loading state and reveal content
-    document.body.classList.remove('is-loading');
-    document.body.classList.add('is-loaded');
+    // Remove loading state and reveal content
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('is-loaded');
 
-    setTimeout(() => {
-      isPageLoading.value = false; // Hide preloader once the page is ready
-    }, 1000);
-  })
+      setTimeout(() => {
+        isPageLoading.value = false; // Hide preloader once the page is ready
+      }, 1000);
+    })
 
   MouseFollower.registerGSAP(gsap);
   cursor = new MouseFollower({
@@ -168,7 +168,7 @@ watch(
   () => {
     // Reinitialize Locomotive Scroll and reset cursor state on route change
     setTimeout(() => {
-      reinitializeLocomotiveScroll();
+      // reinitializeLocomotiveScroll();
       resetCursorState(); // Reset the cursor state
     }, 500); // Delay to ensure the page content is updated
   }

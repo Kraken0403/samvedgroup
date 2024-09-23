@@ -3,9 +3,9 @@
 export default {
   devtools: { enabled: true },
 
-  plugins: [
-    '~/plugins/locomotive-scroll.client.js'
-  ],
+  // plugins: [
+  //   '~/plugins/locomotive-scroll.client.js'
+  // ],
 
   css: [
     '@/assets/styles/global.scss'
@@ -20,18 +20,9 @@ export default {
     }
   },
 
-
-
   icon: {
     serverBundle: {
       collections: ['uil', 'mdi', 'fa']// <!--- this
-    }
-  },
-
-  locomotiveScroll: {
-    // module options
-    pluginOptions: {
-      smooth: true
     }
   },
 
