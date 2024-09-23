@@ -11,6 +11,8 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@iconify-json/mdi": "^1.2.0",
+    "@iconify-json/uil": "^1.2.0",
     "@nuxt/icon": "^1.4.5",
     "gsap": "^3.12.5",
     "locomotive-scroll": "^4.1.4",

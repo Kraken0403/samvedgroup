@@ -14,7 +14,7 @@
                         <img src="../assets/images/grassland-logo-2.png" alt="">
                     </div>
                     <div class="upr-book">
-                        <Button buttonText="Learn More" linkColor="#ffffff"/>
+                        <Button buttonText="Learn More" linkColor="#ffffff" link="/work/thegrasslands"/>
                     </div>
                 </div>
             </div>

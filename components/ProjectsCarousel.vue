@@ -4,7 +4,7 @@
             <div class="pc-wrapper">
                 <div class="pc-head">
                     <h2>Check out<br/>Our Projects</h2>
-                    <Button buttonText="All Projects"/>
+                    <Button buttonText="All Projects" link="/projects"/>
                 </div>
                 <div class="pc-carousel">
                     <swiper

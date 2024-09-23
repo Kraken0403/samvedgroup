@@ -83,6 +83,29 @@ img {
     width: 33.3333%;
 }
 
+body.is-loading {
+    visibility: hidden;
+    overflow: hidden;
+  }
+  
+  body.is-loaded {
+    visibility: visible;
+    overflow: auto;
+  }
+
+  [data-scroll-container] {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  [data-scroll] {
+    will-change: transform;
+  }
+
+  [data-scroll-section] {
+    position: relative;
+  }
+
 
 .swiper-button-prev, .swiper-button-next {
     color: white!important;

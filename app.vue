@@ -1,6 +1,7 @@
 <template>
   <div data-scroll-container>
     <NuxtLayout>
+      <Preloader v-if="isPageLoading" />
       <NuxtPage />
     </NuxtLayout>
   </div>
@@ -11,6 +12,7 @@ import { useNuxtApp } from '#app';
 import { onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import gsap from 'gsap';
+import Preloader from '~/components/Preloader.vue';
 import MouseFollower from 'mouse-follower';
 
 const nuxtApp = useNuxtApp();
@@ -18,9 +20,13 @@ const router = useRouter();
 
 let cursor;
 
+const isPageLoading = ref(true); 
+
 const initLocomotiveScroll = () => {
+  // console.log(nuxtApp.$locomotiveScroll)
   if (nuxtApp.$locomotiveScroll) {
     nuxtApp.$locomotiveScroll.update(); // Update if already initialized
+    console.log('Locomotive Scroll Found')
   } else {
     console.error('Locomotive Scroll instance not found');
   }
@@ -74,7 +80,19 @@ const resetCursorState = () => {
 
 onMounted(() => {
   // Initialize Locomotive Scroll and the custom cursor when the page loads
-  initLocomotiveScroll();
+    isPageLoading.value = true;
+
+    window.addEventListener('load', () => {
+      initLocomotiveScroll();
+
+  // Remove loading state and reveal content
+    document.body.classList.remove('is-loading');
+    document.body.classList.add('is-loaded');
+
+    setTimeout(() => {
+      isPageLoading.value = false; // Hide preloader once the page is ready
+    }, 1000);
+  })
 
   MouseFollower.registerGSAP(gsap);
   cursor = new MouseFollower({
@@ -140,6 +158,8 @@ onMounted(() => {
   } else {
     console.warn("No elements found with class 'custom-slider'");
   }
+
+ 
 });
 
 // Watch route changes to reinitialize Locomotive Scroll and reset cursor
@@ -148,7 +168,7 @@ watch(
   () => {
     // Reinitialize Locomotive Scroll and reset cursor state on route change
     setTimeout(() => {
-      reinitializeLocomotiveScroll(); // Reinitialize Locomotive Scroll
+      reinitializeLocomotiveScroll();
       resetCursorState(); // Reset the cursor state
     }, 500); // Delay to ensure the page content is updated
   }

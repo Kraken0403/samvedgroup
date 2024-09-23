@@ -11,7 +11,7 @@ export default {
     '@/assets/styles/global.scss'
   ],
 
-  modules: ["nuxt-locomotive-scroll", "@nuxt/icon", "@nuxtjs/prismic"],
+  modules: [ "@nuxt/icon", "@nuxtjs/prismic"],
   prismic: {
     endpoint: 'https://samved-group.cdn.prismic.io/api/v2',
     lang: 'en',
@@ -20,24 +20,11 @@ export default {
     }
   },
 
-  // pages: {
-  //   index: {
-  //     file: '~/pages/index.vue'
-  //   },
-  //   about: {
-  //     file: '~/pages/about.vue'
-  //   },
-  //   projects: {
-  //     file: '~/pages/projects.vue'
-  //   },
-  //   project: {
-  //     [ projectname ]: 'pages/project/[projectname].vue'
-  //   }
-  // },
+
 
   icon: {
     serverBundle: {
-      collections: ['uil', 'mdi'] // <!--- this
+      collections: ['uil', 'mdi', 'fa']// <!--- this
     }
   },
 

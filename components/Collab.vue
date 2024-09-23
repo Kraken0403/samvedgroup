@@ -23,7 +23,7 @@
                     </div>
                     
                     <div class="collab-button">
-                        <Button buttonText="Contact Us"/>
+                        <Button buttonText="Contact Us" link="/contact"/>
                     </div>
                 </div>
             
