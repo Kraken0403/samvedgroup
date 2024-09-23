@@ -1,11 +1,15 @@
+// plugins/locomotive.client.js
+
 import { defineNuxtPlugin } from '#app';
+import LocomotiveScroll from 'locomotive-scroll';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import LocomotiveScroll from 'locomotive-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default defineNuxtPlugin((nuxtApp) => {
+  let locomotiveScroll;
+
   nuxtApp.hook('app:mounted', () => {
     const scrollEl = document.querySelector('[data-scroll-container]');
 
@@ -14,9 +18,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       return;
     }
 
-    const locomotiveScroll = new LocomotiveScroll({
+    locomotiveScroll = new LocomotiveScroll({
       el: scrollEl,
-      smooth: true
+      smooth: true,
     });
 
     locomotiveScroll.on('scroll', ScrollTrigger.update);
@@ -30,7 +34,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       getBoundingClientRect() {
         return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
       },
-      pinType: scrollEl.style.transform ? 'transform' : 'fixed'
+      pinType: scrollEl.style.transform ? 'transform' : 'fixed',
     });
 
     ScrollTrigger.addEventListener('refresh', () => locomotiveScroll.update());
@@ -38,5 +42,11 @@ export default defineNuxtPlugin((nuxtApp) => {
 
     // Provide the locomotive instance to be used anywhere in the app
     nuxtApp.provide('locomotiveScroll', locomotiveScroll);
+  });
+
+  nuxtApp.hook('page:finish', () => {
+    if (locomotiveScroll) {
+      locomotiveScroll.update(); // Update on page transition
+    }
   });
 });

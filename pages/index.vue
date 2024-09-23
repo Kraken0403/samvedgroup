@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div data-scroll-container>
         <Header />
         <HomeHero />
         <Whatsapp />

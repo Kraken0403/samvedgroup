@@ -3,9 +3,12 @@
 export default {
   devtools: { enabled: true },
 
-  // plugins: [
-  //   '~/plugins/locomotive-scroll.client.js'
-  // ],
+  // plugins: ['~/plugins/locomotive.client.js'],
+
+  build: {
+    extractCSS: true,
+    // Other configurations...
+  },
 
   css: [
     '@/assets/styles/global.scss'
