@@ -27,11 +27,11 @@
   
   <script setup>
   import ProjectFilter from './ProjectFilter.vue';
- import grasslands from '../assets/images/balcony.png'
- import dreams from '../assets/images/dreams.jpg'
- import valley from '../assets/images/valley.jpg'
- import reres from '../assets/images/re-res.jpg'
- import recomm from '../assets/images/re-comm.jpg'
+  import grasslands from '../assets/images/balcony.png'
+  import dreams from '../assets/images/dreams.jpg'
+  import valley from '../assets/images/valley.jpg'
+  import reres from '../assets/images/re-res.jpg'
+  import recomm from '../assets/images/re-comm.jpg'
 //  import sampleThree from '../assets/images/sample2.png'
   const projects = [
     { id: 1, type: 'residential', title: 'The Grasslands', image: grasslands, link:"./project/thegrasslands", config: '4 & 3 BHK' },
