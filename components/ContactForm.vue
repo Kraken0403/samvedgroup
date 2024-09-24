@@ -5,25 +5,36 @@
         <div class="cf-details">
           <div class="cf-detail-card">
             <h2>Our Address</h2>
-            <p>
-              SAMVED INFRA, Shop No 10, 1st Floor, City Light Complex, T B Road, Vijapur, Vajapur, Mahesana, Gujarat, 382875
+            <p> Beside Keshav Aradhyam,
+                Kudasan Central(KC), Gandhinagar - 382421, Gujarat 
             </p>
+           
           </div>
           <div class="cf-detail-card">
             <h2>Contact Details</h2>
             <p>
-              salessamvedgroup@gmail.com<br />
-              +91-9909223336<br />
+              info@samvedgroup.com<br />
               +91-9512447776
             </p>
           </div>
           <div class="cf-detail-card">
             <h2>Our Socials</h2>
-            <div class="social-icons">
-              <Icon name="uil:instagram" />
-              <Icon name="uil:facebook" />
-              <Icon name="uil:linkedin" />
+            <div class="socials-icons">
+              <a href="https://www.facebook.com/profile.php?id=61565955622784">
+                <Icon name="uil:facebook" />
+              </a>
+              <a href="https://www.instagram.com/samvedgroup/">
+                <Icon name="uil:instagram" />
+              </a>
+              <!-- <Icon name="uil:facebook" style="color: white" /> -->
+              <a href="https://www.linkedin.com/in/samved-group-272299280/">
+                <Icon name="uil:linkedin" />
+              </a>
+              <a href="https://www.youtube.com/@samvedgroup">
+                <Icon name="uil:youtube" />
+              </a>
             </div>
+             
           </div>
         </div>
         <div class="cf-form">

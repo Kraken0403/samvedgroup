@@ -31,15 +31,19 @@
                         </ul>
                     </div>
                     <div class="footer-addr">
-                        <p>Beside Keshav Aradhyam,
+                        <p>
+                            Beside Keshav Aradhyam,
                             Kudasan Central(KC), Gandhinagar - 382421, Gujarat 
                         </p>
-                        <p>salessamvedgroup@gmail.com</p>
+                        <p>info@samvedgroup.com</p>
                         <a href="tel:+919512447776">+91-9512447776</a>
                     </div>
                     <div class="footer-social">
                         <p>Follow Us On</p>
                         <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61565955622784">
+                                <Icon name="uil:facebook" style="color: #111111"/>
+                            </a>
                             <a href="https://www.instagram.com/samvedgroup/">
                                 <Icon name="uil:instagram" style="color: #111111" />
                             </a>
@@ -50,6 +54,7 @@
                             <a href="https://www.youtube.com/@samvedgroup">
                                 <Icon name="uil:youtube" style="color: #111111" />
                             </a>
+                            
                         </div>
                     </div>
 

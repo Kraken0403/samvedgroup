@@ -27,7 +27,19 @@
                 flex-direction: column;
                 justify-content: space-between;
                 transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+                .socials-icons {
+                    display: flex;
+                    gap: 10px;
 
+                    a{
+                        text-decoration: none;
+                        font-size: 18px;
+                        color: $dark;
+                        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+                    }
+                }
+                
                 h2 {
                     font-size: 3rem;
                     color: $dark;
@@ -53,6 +65,12 @@
                     p{
                         color: $white;
                         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+                    }
+
+                    .socials-icons a {
+                        color: $white;
+                        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
                     }
 
                     .social-icons span {

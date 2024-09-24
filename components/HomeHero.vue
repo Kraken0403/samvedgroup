@@ -12,6 +12,9 @@
           </div>
           <div class="container-wide">
             <div class="hero-icons">
+              <a href="https://www.facebook.com/profile.php?id=61565955622784">
+                <Icon name="uil:facebook" style="color: white"/>
+              </a>
               <a href="https://www.instagram.com/samvedgroup/">
                 <Icon name="uil:instagram" style="color: white" />
               </a>
@@ -21,8 +24,8 @@
               </a>
               <a href="https://www.youtube.com/@samvedgroup">
                 <Icon name="uil:youtube" style="color: white" />
-
               </a>
+              
             </div>
           </div>
           
@@ -71,7 +74,7 @@
     },
     setup() {
       onMounted(() => {
-        const textArray = ["Landmarks", "Excellence", "Dreams", "Future", "Memories"];
+        const textArray = ["Families", "Excellence", "Dreams", "Future", "Memories"];
         const replacingText = document.querySelector('.words span');
         let currentIndex = 0;
 

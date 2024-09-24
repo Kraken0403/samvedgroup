@@ -17,13 +17,13 @@
                 </div>
 
                 <div class="col-20 d-flex audio-ham">
-                    <div class="audio-wrapper">
+                    <!-- <div class="audio-wrapper">
                         <div class="audio-controls">
                             <button @click="toggleMute" class="mute-unmute link" :style="{color: hamburgerColor, borderColor: hamburgerColor}">
                                 <icon :name="isMuted ? 'mdi:volume-off' : 'mdi:volume-high'" />
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="phone-wrapper">
                         <a href="tel:+919512447776">
                             <button :style="{color: hamburgerColor, borderColor: hamburgerColor}">
@@ -80,11 +80,12 @@ export default {
     },
     setup() {
         const overlayMenu = ref(null);
-        let isMenuOpen = false;
+        const isMenuOpen = ref(false); // Reactive ref for menu open state
 
         const toggleOverlay = () => {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
+            isMenuOpen.value = !isMenuOpen.value; // Toggle the value reactively
+            if (isMenuOpen.value) {
+                // Open menu animation
                 gsap.to("#navLine1", { y: 4, duration: 0.3 });
                 gsap.to("#navLine3", { y: -4, duration: 0.3 });
                 gsap.to(overlayMenu.value, {
@@ -92,10 +93,16 @@ export default {
                     duration: 0.5,
                     ease: "power3.inOut",
                 });
-                gsap.to(".overlay-bg", { opacity: 1, duration: 0.3, delay: 0.4, onComplete: function() {
-                    document.querySelector('.overlay-bg').style.pointerEvents = "auto";
-                }});
+                gsap.to(".overlay-bg", {
+                    opacity: 1,
+                    duration: 0.3,
+                    delay: 0.4,
+                    onComplete: function() {
+                        document.querySelector('.overlay-bg').style.pointerEvents = "auto";
+                    }
+                });
             } else {
+                // Close menu animation
                 gsap.to("#navLine1", { y: 0, duration: 0.3 });
                 gsap.to("#navLine3", { y: 0, duration: 0.3 });
                 gsap.to(overlayMenu.value, {
@@ -103,53 +110,24 @@ export default {
                     duration: 0.5,
                     ease: "power3.inOut",
                 });
-                gsap.to(".overlay-bg", { opacity: 0, duration: 0.3, delay: 0.2, onComplete: function() {
-                    document.querySelector('.overlay-bg').style.pointerEvents = "none";
-                }});
+                gsap.to(".overlay-bg", {
+                    opacity: 0,
+                    duration: 0.3,
+                    delay: 0.2,
+                    onComplete: function() {
+                        document.querySelector('.overlay-bg').style.pointerEvents = "none";
+                    }
+                });
             }
         };
-
-        const audio = ref(null);
-        const isPlaying = ref(false);
-        const isMuted = ref(false);
-
-        const togglePlayPause = () => {
-            if (isPlaying.value) {
-                audio.value.pause();
-            } else {
-                audio.value.play();
-            }
-            isPlaying.value = !isPlaying.value;
-        };
-
-        const toggleMute = () => {
-            audio.value.muted = !audio.value.muted;
-            isMuted.value = audio.value.muted;
-        };
-
-        onMounted(() => {
-            audio.value = new Audio('/audio.mp3');
-            audio.value.loop = true;
-            audio.value.play();
-            isPlaying.value = true;
-        });
-
-        onUnmounted(() => {
-            if (audio.value) {
-                audio.value.pause();
-            }
-        });
 
         return {
             overlayMenu,
-            toggleOverlay,
-            togglePlayPause,
-            toggleMute,
-            isPlaying,
-            isMuted
+            toggleOverlay, // Expose toggleOverlay to template
         };
     }
 };
+
 </script>
 
 <style lang="scss" src="./Header.scss" scoped>
