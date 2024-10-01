@@ -11,16 +11,14 @@
 import { ref, onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Preloader from '~/components/Preloader.vue';
 import MouseFollower from 'mouse-follower';
 import { useNuxtApp } from '#app';
 
 const router = useRouter();
-const nuxtApp = useNuxtApp();
 const isPageLoading = ref(true);
 let cursor;
-let locomotiveScroll;
+
 
 const initMouseFollower = () => {
   cursor = new MouseFollower({
@@ -102,7 +100,7 @@ onMounted(() => {
 watch(
   () => router.currentRoute.value,
   () => {
-    cursor.remove(); // Remove the current cursor instance
+    cursor.destroy(); // Remove the current cursor instance
     initMouseFollower(); // Reinitialize cursor
 
   }

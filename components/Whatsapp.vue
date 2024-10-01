@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="whatsapp-button">
                 <a href="https://api.whatsapp.com/send?phone=919512447776&text=Hello!" target="_blank">
-                    <img src="../assets/images/wa.png" alt="WhatsApp">
+                    <Icon name="uil:whatsapp" style="{color: '#0000000'}" />
                 </a>
             </div>
         </div>
@@ -23,19 +23,26 @@ export default {
 <style lang="scss" scoped>
     .whatsapp-button {
         position: fixed;
-        bottom: 20px;
         right: 20px;
+        top: 30%;
         z-index: 1000;
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
+
+        span {
+            font-size: 45px;
+            background: rgb(202, 202, 202);
+        }
     }
+
+
 
     .whatsapp-button a img {
         width: 100%;
         height: auto;
         border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        background: #f5f5f5;
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background: transparent;
         transition: all 0.3s ease;
     }
 

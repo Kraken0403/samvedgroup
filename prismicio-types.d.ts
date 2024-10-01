@@ -4,6 +4,71 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type GalleryDocumentDataSlicesSlice = GalleryImagesSlice;
+
+/**
+ * Content for Gallery documents
+ */
+interface GalleryDocumentData {
+  /**
+   * Slice Zone field in *Gallery*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<GalleryDocumentDataSlicesSlice> /**
+   * Meta Title field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: gallery.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: gallery.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Gallery*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Gallery document from Prismic
+ *
+ * - **API ID**: `gallery`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GalleryDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<GalleryDocumentData>,
+    "gallery",
+    Lang
+  >;
+
 type ProjectPageDocumentDataSlicesSlice = ProjectIntroSlice | ProjectHeroSlice;
 
 /**
@@ -69,7 +134,69 @@ export type ProjectPageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = ProjectPageDocument;
+export type AllDocumentTypes = GalleryDocument | ProjectPageDocument;
+
+/**
+ * Item in *GalleryImages → Default → Primary → Gallery Image*
+ */
+export interface GalleryImagesSliceDefaultPrimaryGalleryImageItem {
+  /**
+   * image field in *GalleryImages → Default → Primary → Gallery Image*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_images.default.primary.gallery_image[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *GalleryImages → Default → Primary*
+ */
+export interface GalleryImagesSliceDefaultPrimary {
+  /**
+   * Gallery Image field in *GalleryImages → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_images.default.primary.gallery_image[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  gallery_image: prismic.GroupField<
+    Simplify<GalleryImagesSliceDefaultPrimaryGalleryImageItem>
+  >;
+}
+
+/**
+ * Default variation for GalleryImages Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryImagesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<GalleryImagesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *GalleryImages*
+ */
+type GalleryImagesSliceVariation = GalleryImagesSliceDefault;
+
+/**
+ * GalleryImages Shared Slice
+ *
+ * - **API ID**: `gallery_images`
+ * - **Description**: GalleryImages
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryImagesSlice = prismic.SharedSlice<
+  "gallery_images",
+  GalleryImagesSliceVariation
+>;
 
 /**
  * Item in *ProjectHero → Default → Primary → Project Tags*
@@ -392,10 +519,18 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      GalleryDocument,
+      GalleryDocumentData,
+      GalleryDocumentDataSlicesSlice,
       ProjectPageDocument,
       ProjectPageDocumentData,
       ProjectPageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      GalleryImagesSlice,
+      GalleryImagesSliceDefaultPrimaryGalleryImageItem,
+      GalleryImagesSliceDefaultPrimary,
+      GalleryImagesSliceVariation,
+      GalleryImagesSliceDefault,
       ProjectHeroSlice,
       ProjectHeroSliceDefaultPrimaryProjectTagsItem,
       ProjectHeroSliceDefaultPrimary,

@@ -14,7 +14,7 @@ export default {
     '@/assets/styles/global.scss'
   ],
 
-  modules: [ "@nuxt/icon", "@nuxtjs/prismic", 'nuxt-swiper'],
+  modules: [ "@nuxt/icon", "@nuxtjs/prismic", 'nuxt-swiper', 'nuxt-easy-lightbox'],
   prismic: {
     endpoint: 'https://samved-group.cdn.prismic.io/api/v2',
     lang: 'en',

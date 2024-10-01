@@ -12,6 +12,7 @@
                 <div class="upr-content">
                     <div class="upr-logo">
                         <img src="../assets/images/grassland-logo-2.png" alt="">
+                        <p>4 & 3 BHK Homes & Showrooms</p>
                     </div>
                     <div class="upr-book">
                         <Button buttonText="Learn More" linkColor="#ffffff" link="/work/thegrasslands"/>

@@ -12,7 +12,17 @@
 
     form {
         width: 100%;
-
+        .form-text {
+            padding: 30px 0;
+            h5 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            p{
+                margin: 5px 0;
+                font-size: 16px;
+            }
+        }
         .form-row {
             display: flex;
             flex-direction: column;
@@ -42,5 +52,15 @@
                 
             }
         }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cp-content .cp-content-form {
+        width: 100%;
+    }
+
+    .cp-content {
+        padding: 20px;
     }
 }

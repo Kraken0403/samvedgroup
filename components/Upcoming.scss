@@ -7,6 +7,15 @@
         width: 100%;
         height: 70rem;
         overflow: hidden;
+
+        .upr-logo {
+            
+            p{
+                font-size: 2.3rem;
+                text-align: center;
+                color: $light;
+            }
+        }
         // background: transparent;
         .bg-img-wrapper {
             width: 100%;
@@ -85,6 +94,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .upcoming-wrapper .upr-logo p {
+        font-size: 2rem;
+    }
     .upcoming-wrapper {
         height: 50rem;
     }

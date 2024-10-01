@@ -14,9 +14,9 @@
               <p v-if="project.config" class="tag">
                 {{ project.config }}
               </p>
-            <p class="tag">
-              {{ project.type }}
-            </p>
+              <p class="tag">
+                {{ project.type }}
+              </p>
             </div>
             </a>
           </div>
