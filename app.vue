@@ -19,7 +19,6 @@ const router = useRouter();
 const isPageLoading = ref(true);
 let cursor;
 
-
 const initMouseFollower = () => {
   cursor = new MouseFollower({
     el: null,
@@ -52,16 +51,34 @@ const initMouseFollower = () => {
   });
 };
 
+// Function to return a Promise for image loading
+const loadImages = () => {
+  const images = Array.from(document.images);
+
+  return Promise.all(
+    images.map((img) => {
+      return new Promise((resolve) => {
+        if (img.complete) {
+          resolve(); // Already loaded images
+        } else {
+          img.onload = resolve; // Resolve when image finishes loading
+          img.onerror = resolve; // Handle error case
+        }
+      });
+    })
+  );
+};
+
 onMounted(() => {
   isPageLoading.value = true;
 
-  window.addEventListener('load', () => {
-    document.body.classList.remove('is-loading');
-    document.body.classList.add('is-loaded');
-
+  // Wait for all images and content to load
+  loadImages().then(() => {
     setTimeout(() => {
-      isPageLoading.value = false; // Hide preloader once the page is ready
-    }, 1000);
+      isPageLoading.value = false; // Hide preloader once images are loaded
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('is-loaded');
+    }, 500); // Optional delay for smooth transition
   });
 
   MouseFollower.registerGSAP(gsap);
@@ -102,7 +119,6 @@ watch(
   () => {
     cursor.destroy(); // Remove the current cursor instance
     initMouseFollower(); // Reinitialize cursor
-
   }
 );
 </script>
