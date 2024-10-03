@@ -48,14 +48,15 @@
                         <NuxtLink to="/projects" target="_self">Projects</NuxtLink>
                     </div>
                     <div class="menu-item">
-                        <NuxtLink to="/about" target="_self">About Us</NuxtLink>
+                        <NuxtLink to="/about" target="_self">About Samved</NuxtLink>
+                    </div>
+                    <div class="menu-item">
+                        <NuxtLink to="/channel-partner" target="_self">Partner with us</NuxtLink>
                     </div>
                     <div class="menu-item">
                         <NuxtLink to="/contact" target="_self">Contact Us</NuxtLink>
                     </div>
-                    <div class="menu-item">
-                        <NuxtLink to="/channel-partner" target="_self">Channel Partner</NuxtLink>
-                    </div>
+                    
                 </div>
             </div>
         </div>

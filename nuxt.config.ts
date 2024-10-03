@@ -2,7 +2,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default {
   devtools: { enabled: true },
-
+  app
+  : {
+      head
+        :{
+        charset:'utf-8',
+        viewport:'width=device-width, initial-scale=1',
+      }
+  },
   // plugins: ['~/plugins/locomotive.client.js'],
 
   build: {
