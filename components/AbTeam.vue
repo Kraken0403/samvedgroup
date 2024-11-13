@@ -32,9 +32,9 @@
                     </div>
                     <div class="abt-photo">
                         <div class="abt-photo">
-                            <img src="../assets/images/zeelbhai.jpg" alt="">
-                            <h2>Mr. Zeel Patel</h2>
-                            <p>Director</p>
+                            <img src="../assets/images/paresh.jpg" alt="">
+                            <h2>Mr. Paresh Patel</h2>
+                            <p>Direcot HR & Admin</p>
                         </div>
                     </div>
                 </div>
