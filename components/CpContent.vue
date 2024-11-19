@@ -14,8 +14,8 @@
                         <Button buttonText="submit"/>
                         <div class="form-text">
                             <h5>Terms and Conditions</h5>
-                            <p><strong>Commission:</strong> 2% Commission for selling residential or Commercial properties</p>
-                            <p><strong>Payment Release:</strong> 100% Commission Release on Agreement to sale (Banakhat) or Sale Deed (Dastavej) whichever is earlier</p>
+                            <!-- <p><strong>Commission:</strong> 2% Commission for selling residential or Commercial properties</p>
+                            <p><strong>Payment Release:</strong> 100% Commission Release on Agreement to sale (Banakhat) or Sale Deed (Dastavej) whichever is earlier</p> -->
                             <p>*Get in touch with us for channel partner support +91-95124 47776 or email us at info@samvedgroup.com*</p>
                         </div>
                     </div>
