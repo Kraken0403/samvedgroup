@@ -22,9 +22,9 @@
                   <img src="../assets/images/amph.jpg" alt="" />
                   <h2>The Grasslands</h2>
                   <div class="tags">
+                    <div class="tag">4 & 3 BHK</div>
                     <div class="tag">Residential</div>
                     <div class="tag">Commercial</div>
-                    <div class="tag">4 & 3BHK</div>
                   </div>
                 </a>
               </SwiperSlide>
@@ -33,8 +33,8 @@
                   <img src="../assets/images/re-res.jpg" alt="" />
                   <h2>Radhe Infinity Residential</h2>
                   <div class="tags">
-                    <div class="tag">Residential</div>
                     <div class="tag">2 & 3 BHK</div>
+                    <div class="tag">Residential</div>
                   </div>
                 </a>
               </SwiperSlide>
@@ -52,9 +52,9 @@
                   <img src="../assets/images/dreams.jpg" alt="" />
                   <h2>Samved Dreams</h2>
                   <div class="tags">
+                    <div class="tag">2 & 3 BHK</div>
                     <div class="tag">Residential</div>
                     <div class="tag">Commercial</div>
-                    <div class="tag">2 & 3 BHK</div>
                   </div>
                 </a>
               </SwiperSlide>
@@ -63,9 +63,10 @@
                   <img src="../assets/images/valley.jpg" alt="" />
                   <h2>Samved Green Valley</h2>
                   <div class="tags">
+                    <div class="tag">2 & 3 BHK</div>
+
                     <div class="tag">Residential</div>
                     <div class="tag">Commercial</div>
-                    <div class="tag">2 & 3 BHK</div>
                   </div>
                 </a>
               </SwiperSlide>

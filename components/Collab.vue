@@ -13,7 +13,7 @@
                             <p>Our vision is to be at the forefront of  innovation,  shaping a world where every structure is a work of art, every space is  an experience, and every project counts. Join us on this journey as we  embark on an exciting adventure to make dreams a reality. Together, we  will build, craft, and dream of a better, more beautiful future for all.</p>
                             <div class="collab-links">
                                 <div class="collab-link">
-                                    <a href="">Channel Partner</a>
+                                    <a href="/channel-partner">Channel Partner</a>
                                 </div>
                                 <!-- <div class="collab-link">
                                     <a href="">Joint Development</a>
