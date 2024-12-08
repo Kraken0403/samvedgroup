@@ -64,7 +64,6 @@
                   <h2>Samved Green Valley</h2>
                   <div class="tags">
                     <div class="tag">2 & 3 BHK</div>
-
                     <div class="tag">Residential</div>
                     <div class="tag">Commercial</div>
                   </div>
