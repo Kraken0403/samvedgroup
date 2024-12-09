@@ -37,6 +37,14 @@
                             <p>Managing Director</p>
                         </div>
                     </div>
+
+                    <div class="abt-photo">
+                        <div class="abt-photo">
+                            <img src="../assets/images/paresh.jpeg" alt="">
+                            <h2>Mr. Paresh Patel</h2>
+                            <p>Director, HR & Admin</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
