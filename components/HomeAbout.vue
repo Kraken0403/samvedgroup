@@ -16,7 +16,7 @@
                     <div class="col-50 col-100">
                         <div class="ha-image" >
                             <div class="ha-image-wrapper" data-scroll data-scroll-speed="-1.1">
-                                <img src="../assets/images/ravhitbhai2.png" alt="">
+                                <img src="../assets/images/rachitbhai2.png" alt="">
                                 <p>
                                     <strong>Rachit Patel</strong>
                                     <br/>Director
