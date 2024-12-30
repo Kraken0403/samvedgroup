@@ -25,7 +25,7 @@
                     </div>
                     <div class="abt-photo">
                         <div class="abt-photo">
-                            <img src="../assets/images/rachitbhai.jpg" alt="">
+                            <img src="../assets/images/rachitbhai2.png" alt="">
                             <h2>Mr. Rachit Patel</h2>
                             <p>Director</p>
                         </div>
@@ -40,9 +40,9 @@
 
                     <div class="abt-photo">
                         <div class="abt-photo">
-                            <img src="../assets/images/paresh.jpeg" alt="">
-                            <h2>Mr. Paresh Patel</h2>
-                            <p>Director, HR & Admin</p>
+                            <img src="../assets/images/zeelbhai.jpg" alt="">
+                            <h2>Mr. Zeel Patel</h2>
+                            <p>Director</p>
                         </div>
                     </div>
                 </div>
