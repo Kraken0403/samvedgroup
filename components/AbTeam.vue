@@ -12,7 +12,7 @@
                 </div>
                 <div class="abt-photos">
                     <div class="abt-photo">
-                        <img src="../assets/images/prakashbhai.jpg" alt="">
+                        <img src="../assets/images/prakashbhai2.jpg" alt="">
                         <h2>Mr. Prakashbhai Patel</h2>
                         <p>Chairman</p>
                     </div>
