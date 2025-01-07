@@ -10,24 +10,68 @@
                     </div>
 
                     <div class="testimonial-small-image">
-                        <div data-scroll data-scroll-speed="-2.2">
-                            <img src="../assets/images/22.jpg"  alt="">
-                        </div>
+                        <swiper
+                            :modules="modules"
+                            navigation
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                            }}
+                            loop
+                        >
+                            <swiper-slide>
+                                <video autoplay muted loop controls>
+                                    <source src="../assets/videos/1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <video autoplay muted loop controls>
+                                    <source src="../assets/videos/2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <video autoplay muted loop controls>
+                                    <source src="../assets/videos/3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <video autoplay muted loop controls>
+                                    <source src="../assets/videos/4.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </swiper-slide>
+                        </swiper>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
 </template>
-
 <script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 export default {
-    setup () {
-        return {}
-    }
-}
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    setup() {
+        return {
+        modules: [Navigation, Pagination, Autoplay],
+      };
+    },
+};
 </script>
+
+
 
 <style lang="scss" src="./Testimonial.scss" scoped>
 
