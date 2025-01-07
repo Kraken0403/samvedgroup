@@ -59,7 +59,7 @@
             width: 50%;
             height: 50%;
             left: 50%;
-            top: 50%;
+            top: 40%;
             transform: translate(-50%, -50%);
             overflow: hidden;
             z-index: 10;
@@ -95,6 +95,10 @@
     }
     .testimonial-image-wrapper{
         height: 70rem;
+    }
+
+    .testimonial-image-wrapper .testimonial-small-image {
+        width: 60%;
     }
 
     .testimonial-big-image {
