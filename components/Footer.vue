@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>Copyright Samved Group 2024</p>
+                <p>Copyright Nakshatra Infra by Samved Group 2024</p>
                 <p>Made with heart by Logion Solutions</p>
             </div>
         </div>
