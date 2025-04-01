@@ -1,5 +1,5 @@
 <template>
-    <div class="pc" data-scroll data-scroll-section>
+    <div class="pc">
       <div class="container-wide">
         <div class="pc-wrapper">
           <div class="pc-head">
@@ -80,41 +80,48 @@
   </template>
   
   <script>
-  import { ref, onMounted, onUnmounted } from 'vue';
-  import { Swiper, SwiperSlide} from 'swiper/vue';
-  import 'swiper/css';
-  import 'swiper/css/navigation'; 
-
+  import { ref, onMounted, onUnmounted } from 'vue'
+  import { Swiper, SwiperSlide } from 'swiper/vue'
+  import { Autoplay, Navigation, EffectCreative } from 'swiper/modules'
+  import 'swiper/css'
+  import 'swiper/css/navigation'
+  
   export default {
     components: {
       Swiper,
-      SwiperSlide,
+      SwiperSlide
     },
     setup() {
-      const isMobile = ref(false);
-      const isTablet = ref(false);
+      const isMobile = ref(false)
+      const isTablet = ref(false)
   
       const checkScreenSize = () => {
-        isMobile.value = window.matchMedia('(max-width: 768px)').matches;
-        isTablet.value = window.matchMedia('(max-width: 1200px)').matches;
-      };
+        if (process.client) {
+          isMobile.value = window.matchMedia('(max-width: 768px)').matches
+          isTablet.value = window.matchMedia('(max-width: 1200px)').matches
+        }
+      }
   
       onMounted(() => {
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-      });
+        checkScreenSize()
+        window.addEventListener('resize', checkScreenSize)
+      })
   
       onUnmounted(() => {
-        window.removeEventListener('resize', checkScreenSize);
-      });
+        window.removeEventListener('resize', checkScreenSize)
+      })
+  
+      const modules = [Autoplay, Navigation, EffectCreative]
   
       return {
         isMobile,
         isTablet,
-      };
-    },
-  };
+        modules
+      }
+    }
+  }
   </script>
+  
   
   <style lang="scss" src="./ProjectsCarousel.scss" scoped>
     .swiper-button-prev,

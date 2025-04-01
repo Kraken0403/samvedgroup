@@ -1,9 +1,8 @@
 <template>
-    <div class="collab" data-scroll-section>
+    <div class="collab" >
         <div class="container-wide">
             <div class="collab-wrapper">
                
-                  
                 <div class="collab-card">
                     <div class="collab-main">
                         <div class="collab-card-header">

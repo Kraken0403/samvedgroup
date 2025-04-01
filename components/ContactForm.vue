@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-form" data-scroll-section>
+  <div class="contact-form">
     <div class="container-wide">
       <div class="cf-wrapper">
         <div class="cf-details">

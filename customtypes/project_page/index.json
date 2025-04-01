@@ -17,6 +17,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "embed_map": {
+              "type": "SharedSlice"
+            },
             "project_intro": {
               "type": "SharedSlice"
             },

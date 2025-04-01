@@ -1,0 +1,46 @@
+@import '../assets/styles/variables.scss';
+
+
+.ph2 {
+    position: relative;
+    width: 100%;
+
+    &-wrapper {
+        position: relative;
+        height: 550px;
+        overflow: hidden;
+
+        h1 {
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 6rem;
+        }
+    }
+
+    &-img-wrapper{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.6);
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+    }
+}

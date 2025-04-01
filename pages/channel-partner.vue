@@ -1,21 +1,18 @@
 <template>
     <div>
-        <Header logoImage="/logo.png" hamburgerColor="#111111"/>
-        <ContactHero title="Channel Partner"/>
-        <Whatsapp />
-        <CpContent />
-        <Footer />
+      <Header hamburgerColor="#111111" />
+      <!-- <ContactHero title="Channel Partner" /> -->
+      <ProjectHeroTwo title="Channel Partner"/>
+
+      <Whatsapp />
+      <CpContent />
+      <Footer />
+      <!-- <h1>Hey</h1> -->
     </div>
-</template>
+  </template>
+  
 
-<script>
-export default {
-    setup () {
-        
-
-        return {}
-    }
-}
+<script setup>
 </script>
 
 <style lang="scss" scoped>

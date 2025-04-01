@@ -11,7 +11,7 @@
                         <input type="tel" name="tel" required placeholder="Mobile Number">
                         <textarea name="address" id="address" cols="30" rows="5" placeholder="Address" required />
                         <textarea name="message" id="message" cols="30" rows="5" placeholder="Write a Message"  />
-                        <Button buttonText="submit"/>
+                        <Button buttonText="submit" ></Button>
                         <div class="form-text">
                             <h5>Terms and Conditions</h5>
                             <!-- <p><strong>Commission:</strong> 2% Commission for selling residential or Commercial properties</p>

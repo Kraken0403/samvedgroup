@@ -6,7 +6,7 @@
               <span class="first-word">Creating </span>
 
               <div class="words">
-                <span>Excellence</span>
+                <span ref="replacingTextRef">Excellence</span>
               </div>
           </h1>
           </div>
@@ -59,62 +59,68 @@
     </div>
 </template>
 <script>
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-  import { Pagination, Scrollbar, A11y } from 'swiper/modules';
-  import 'swiper/css';
-  import 'swiper/css/pagination';
-  import 'swiper/css/scrollbar';
-  import gsap from 'gsap';
-  import { onMounted } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import { onMounted, ref, nextTick } from 'vue'
+import gsap from 'gsap'
 
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide,
-    },
-    setup() {
-      onMounted(() => {
-        const textArray = ["Families", "Excellence", "Dreams", "Future", "Memories"];
-        const replacingText = document.querySelector('.words span');
-        let currentIndex = 0;
+export default {
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  setup() {
+    const textArray = ["Families", "Excellence", "Dreams", "Future", "Memories"]
+    const replacingTextRef = ref(null)
 
-        const changeText = () => {
-          gsap.to(replacingText, {
-            y: '-100%',
-            duration: 0.8,
-            ease: 'power4.inOut',
-            
-            onComplete: () => {
-              currentIndex = (currentIndex + 1) % textArray.length;
-              replacingText.textContent = textArray[currentIndex];
-              gsap.fromTo(replacingText, 
-                { y: '100%'}, 
-                { y: '0%', duration: 0.8, ease: 'power4.inOut'  });
-            }
-          });
-        };
+    onMounted(async () => {
+      await nextTick()
 
-        const loopTextChange = () => {
-          changeText();
-          gsap.delayedCall(4, loopTextChange); // Adjust delay as needed
-        };
+      const replacingText = replacingTextRef.value
+      let currentIndex = 0
 
-        loopTextChange();
-      });
+      const changeText = () => {
+        gsap.to(replacingText, {
+          y: '-100%',
+          duration: 0.8,
+          ease: 'power4.inOut',
+          onComplete: () => {
+            currentIndex = (currentIndex + 1) % textArray.length
+            replacingText.textContent = textArray[currentIndex]
+            gsap.fromTo(replacingText,
+              { y: '100%' },
+              { y: '0%', duration: 0.8, ease: 'power4.inOut' })
+          }
+        })
+      }
 
-      const onSwiper = (swiper) => {
-        console.log(swiper);
-      };
-      const onSlideChange = () => {
-        console.log('slide change');
-      };
-      return {
-        onSwiper,
-        onSlideChange,
-        modules: [Pagination, Scrollbar, A11y],
-      };
-    },
-  };
+      const loopTextChange = () => {
+        changeText()
+        gsap.delayedCall(4, loopTextChange)
+      }
+
+      loopTextChange()
+    })
+
+    const onSwiper = (swiper) => {
+      console.log(swiper)
+    }
+
+    const onSlideChange = () => {
+      console.log('slide change')
+    }
+
+    return {
+      replacingTextRef,
+      onSwiper,
+      onSlideChange,
+      modules: [Pagination, Scrollbar, A11y, Autoplay]
+    }
+  }
+}
 </script>
 
 

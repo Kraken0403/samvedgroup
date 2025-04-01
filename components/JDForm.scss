@@ -1,0 +1,68 @@
+@import '../assets/styles/variables.scss';
+
+.jd-form {
+    width: 70%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 60px;
+    p{
+        padding: 60px 0;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-size: 18px;
+        color: rgb(102, 102, 102);
+    }
+
+    
+
+    &-wrapper {
+        width: 100%;
+        p {
+            text-align: left;
+            padding: 15px 0;
+        }
+        form {
+            width: 80%;
+            margin: auto;
+
+            .radios {
+                width: 100%;
+                display: flex;
+                padding-bottom: 30px;
+            }
+
+            input, textarea {
+                width: 100%;
+                padding: 15px 20px;
+                font-size: 16px;
+                color: #111111;
+                outline: none;
+                background-color: #F5F5F5;
+                border: 0px;
+                border-radius: 0px;
+                margin-bottom: 20px;
+                
+            }
+            .container-radio {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                color: rgb(102, 102, 102);
+            }
+
+            input[type="radio"] {
+                width: auto;
+                margin: 0;
+                font-size: 16px;
+            }
+            input[type="submit"] {
+                cursor: pointer;
+                background-color: #262626;
+                color: #fff;
+            } 
+        }
+    }
+}

@@ -4,6 +4,7 @@ export default {
   devtools: { enabled: true },
   app
   : {
+     
       head
         :{
         charset:'utf-8',

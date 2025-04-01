@@ -1,5 +1,5 @@
 <template>
-    <div class="footer" data-scroll-section>
+    <div class="footer" >
         <div class="footer-wrapper" >
             <div class="container-wide">
                 <div class="footer-main">
@@ -16,12 +16,6 @@
                             <li>
                                 <a href="./about">About Us</a>
                             </li>
-                            <!-- <li>
-                                <a href="./career">Career</a>
-                            </li> -->
-                            <!-- <li>
-                                <a href="">Redevelopment</a>
-                            </li> -->
                             <li>
                                 <a href="./channel-partner">Channel Partner</a>
                             </li>

@@ -1,5 +1,5 @@
 <template>
-    <div v-if="data" class="pc" :style="{ backgroundColor: data.slices[0].primary.color }" data-scroll-section>
+    <div v-if="data" class="pc">
       <div class="container-wide">
         <div class="pc-wrapper">
           <div class="pc-intro">
@@ -22,15 +22,15 @@
             <div class="pc-image-one w-70">
               <img :src="data.slices[1].primary.portrait_image_one.url" alt="">
             </div>
-            <swiper :slides-per-view="2" :space-between="15" navigation :pagination="{ clickable: true }">
-              <swiper-slide v-for="(img, index) in data.slices[1].primary.project_images" :key="index">
+            <Swiper :slides-per-view="2" :space-between="15" navigation :pagination="{ clickable: true }">
+              <SwiperSlide v-for="(img, index) in data.slices[1].primary.project_images" :key="index">
                 <img :src="img.project_image.url" :alt="'Image ' + index" />
-              </swiper-slide>
-            </swiper>
+              </SwiperSlide>
+            </Swiper>
           </div>
   
           <div class="pca-video-wrapper">
-            <div class="pca-video" data-scroll>
+            <div class="pca-video">
               <!-- <video controls :src="data.slices[1].primary.video_link?.url"></video> -->
               <img src="" alt="">
             </div>
@@ -43,6 +43,9 @@
               </div>
             </div>
           </div>
+
+          <div class="pc-map" v-html="data.slices[2].primary.iframecode[0]?.text"></div>
+
   
           <div class="pc-amenities">
             <h2>The Features</h2>
@@ -54,11 +57,11 @@
             </div>
           </div>
   
-          <div class="book-now">
+          <!-- <div class="book-now">
             <NuxtLink :to="{ path: '/book-project', query: { projectTitle: encodeURIComponent(data.slices[0].primary.project_title) } }">
               <h1>Book Now</h1>
             </NuxtLink>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -91,7 +94,7 @@
   };
   </script>
   
-  <style lang="scss" src="./ProjectContent.scss" scoped>
+  <style lang="scss" src="./ProjectContent.scss">
   /* Modal styles */
   </style>
   

@@ -69,7 +69,10 @@ export type GalleryDocument<Lang extends string = string> =
     Lang
   >;
 
-type ProjectPageDocumentDataSlicesSlice = ProjectIntroSlice | ProjectHeroSlice;
+type ProjectPageDocumentDataSlicesSlice =
+  | EmbedMapSlice
+  | ProjectIntroSlice
+  | ProjectHeroSlice;
 
 /**
  * Content for Project page documents
@@ -135,6 +138,51 @@ export type ProjectPageDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = GalleryDocument | ProjectPageDocument;
+
+/**
+ * Primary content in *EmbedMap → Default → Primary*
+ */
+export interface EmbedMapSliceDefaultPrimary {
+  /**
+   * iframecode field in *EmbedMap → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: embed_map.default.primary.iframecode
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  iframecode: prismic.RichTextField;
+}
+
+/**
+ * Default variation for EmbedMap Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type EmbedMapSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<EmbedMapSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *EmbedMap*
+ */
+type EmbedMapSliceVariation = EmbedMapSliceDefault;
+
+/**
+ * EmbedMap Shared Slice
+ *
+ * - **API ID**: `embed_map`
+ * - **Description**: EmbedMap
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type EmbedMapSlice = prismic.SharedSlice<
+  "embed_map",
+  EmbedMapSliceVariation
+>;
 
 /**
  * Item in *GalleryImages → Default → Primary → Gallery Image*
@@ -416,7 +464,13 @@ export interface ProjectIntroSliceDefaultPrimary {
    * - **API ID Path**: project_intro.default.primary.next_project_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  next_project_link: prismic.LinkField;
+  next_project_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 
   /**
    * Previous Project Link field in *ProjectIntro → Default → Primary*
@@ -426,7 +480,13 @@ export interface ProjectIntroSliceDefaultPrimary {
    * - **API ID Path**: project_intro.default.primary.previous_project_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  previous_project_link: prismic.LinkField;
+  previous_project_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 
   /**
    * Color field in *ProjectIntro → Default → Primary*
@@ -446,7 +506,7 @@ export interface ProjectIntroSliceDefaultPrimary {
    * - **API ID Path**: project_intro.default.primary.video_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  video_link: prismic.LinkToMediaField;
+  video_link: prismic.LinkToMediaField<prismic.FieldState, never>;
 
   /**
    * Project Vision field in *ProjectIntro → Default → Primary*
@@ -466,7 +526,13 @@ export interface ProjectIntroSliceDefaultPrimary {
    * - **API ID Path**: project_intro.default.primary.google_map
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  google_map: prismic.LinkField;
+  google_map: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 
   /**
    * Brochure field in *ProjectIntro → Default → Primary*
@@ -476,7 +542,7 @@ export interface ProjectIntroSliceDefaultPrimary {
    * - **API ID Path**: project_intro.default.primary.brochure
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  brochure: prismic.LinkToMediaField;
+  brochure: prismic.LinkToMediaField<prismic.FieldState, never>;
 }
 
 /**
@@ -517,6 +583,17 @@ declare module "@prismicio/client" {
     ): prismic.Client<AllDocumentTypes>;
   }
 
+  interface CreateWriteClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options: prismic.WriteClientConfig,
+    ): prismic.WriteClient<AllDocumentTypes>;
+  }
+
+  interface CreateMigration {
+    (): prismic.Migration<AllDocumentTypes>;
+  }
+
   namespace Content {
     export type {
       GalleryDocument,
@@ -526,6 +603,10 @@ declare module "@prismicio/client" {
       ProjectPageDocumentData,
       ProjectPageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      EmbedMapSlice,
+      EmbedMapSliceDefaultPrimary,
+      EmbedMapSliceVariation,
+      EmbedMapSliceDefault,
       GalleryImagesSlice,
       GalleryImagesSliceDefaultPrimaryGalleryImageItem,
       GalleryImagesSliceDefaultPrimary,

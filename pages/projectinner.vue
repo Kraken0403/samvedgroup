@@ -1,12 +1,12 @@
 <template>
     <div>
         <Header />
-        <ProjectHero />
-        <Whatsapp />
-        <ProjectContent />
-        <Testimonial />
-        <TestimonialCarousel />
-        <Footer />
+        <!-- <ProjectHero /> -->
+        <!-- <Whatsapp /> -->
+        <!-- <ProjectContent /> -->
+        <!-- <Testimonial /> -->
+        <!-- <TestimonialCarousel /> -->
+        <!-- <Footer /> -->
     </div>
 </template>
 

@@ -1,126 +1,77 @@
 <template>
   <div>
-    <NuxtLayout>
+    <!-- Preloader -->
+    <transition name="fade">
       <Preloader v-if="isPageLoading" />
-      <NuxtPage />
+    </transition>
+
+    <!-- Page Content Transition -->
+    <NuxtLayout>
+      <NuxtPage :transition="pageTransition" />
     </NuxtLayout>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue';
-import { useRouter } from 'vue-router';
-import gsap from 'gsap';
-import Preloader from '~/components/Preloader.vue';
-import MouseFollower from 'mouse-follower';
-import { useNuxtApp } from '#app';
+import { ref, onMounted, watch } from 'vue'
+import { useRoute, useNuxtApp } from '#app'
+import Preloader from '~/components/Preloader.vue'
 
-const router = useRouter();
-const isPageLoading = ref(true);
-let cursor;
+const route = useRoute()
+const isPageLoading = ref(true)
+const nuxtApp = useNuxtApp()
 
-const initMouseFollower = () => {
-  cursor = new MouseFollower({
-    el: null,
-    container: document.body,
-    className: 'mf-cursor',
-    innerClassName: 'mf-cursor-inner',
-    textClassName: 'mf-cursor-text',
-    mediaClassName: 'mf-cursor-media',
-    mediaBoxClassName: 'mf-cursor-media-box',
-    iconSvgClassName: 'mf-svgsprite',
-    iconSvgNamePrefix: '-',
-    iconSvgSrc: '',
-    dataAttr: 'cursor',
-    hiddenState: '-hidden',
-    textState: '-text',
-    iconState: '-icon',
-    activeState: '-active',
-    mediaState: '-media',
-    stateDetection: {
-      '-inverse-2': '.custom-button',
-      '-pointer': '.link, button, a',
-      '-hidden': 'iframe',
-      '-inverse': '.dark-bg',
-      '-text': '.custom-slider',
-    },
-    speed: 0.55,
-    ease: 'expo.out',
-    skewingText: 2,
-    skewingIcon: 2,
-  });
-};
+watch(() => route.fullPath, (newPath) => {
+  console.log('🔁 ROUTE CHANGED TO:', newPath)
+})
 
-// Function to return a Promise for image loading
-const loadImages = () => {
-  const images = Array.from(document.images);
+// 👇 Page transition config
+const pageTransition = {
+  name: 'page',
+  mode: 'out-in'
+}
 
-  return Promise.all(
-    images.map((img) => {
-      return new Promise((resolve) => {
-        if (img.complete) {
-          resolve(); // Already loaded images
-        } else {
-          img.onload = resolve; // Resolve when image finishes loading
-          img.onerror = resolve; // Handle error case
-        }
-      });
-    })
-  );
-};
-
+// ✅ Initial page load
 onMounted(() => {
-  isPageLoading.value = true;
+  isPageLoading.value = true
+  setTimeout(() => {
+    isPageLoading.value = false
+    document.body.classList.remove('is-loading')
+    document.body.classList.add('is-loaded')
+  }, 1000)
+})
 
-  // Wait for all images and content to load
-  loadImages().then(() => {
-    setTimeout(() => {
-      isPageLoading.value = false; // Hide preloader once images are loaded
-      document.body.classList.remove('is-loading');
-      document.body.classList.add('is-loaded');
-    }, 500); // Optional delay for smooth transition
-  });
+// ✅ Preloader for navigation
+nuxtApp.hook('page:start', () => {
+  isPageLoading.value = true
+})
 
-  MouseFollower.registerGSAP(gsap);
-  initMouseFollower();
-
-  const divs = document.querySelectorAll('div');
-  divs.forEach(div => {
-    div.addEventListener('mousemove', () => {
-      cursor.show();
-    });
-  });
-
-  const sliders = document.querySelectorAll('.swiper');
-  sliders.forEach((i) => {
-    i.addEventListener('mouseenter', () => {
-      cursor.show();
-      cursor.setImg('/arrows.png');
-    });
-
-    i.addEventListener('mousemove', () => {
-      cursor.show();
-    });
-
-    i.addEventListener('mousedown', () => {
-      cursor.show();
-      cursor.setImg('/arrows.png');
-    });
-
-    i.addEventListener('mouseleave', () => {
-      cursor.removeImg();
-    });
-  });
-});
-
-// Watch route changes to reset the cursor state and reinitialize Locomotive Scroll
-watch(
-  () => router.currentRoute.value,
-  () => {
-    cursor.destroy(); // Remove the current cursor instance
-    initMouseFollower(); // Reinitialize cursor
-  }
-);
+nuxtApp.hook('page:finish', () => {
+  console.log('✅ Nuxt finished page render')
+  setTimeout(() => {
+    isPageLoading.value = false
+  }, 600)
+})
 </script>
 
-<style src="./components/cursor.scss"></style>
+<style>
+/* 🔄 Page transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.4s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* 🌀 Preloader fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

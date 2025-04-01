@@ -4,6 +4,7 @@ import { defineAsyncComponent } from "vue";
 import { defineSliceZoneComponents } from "@prismicio/vue";
 
 export const components = defineSliceZoneComponents({
+  embed_map: defineAsyncComponent(() => import("./EmbedMap/index.vue")),
   gallery_images: defineAsyncComponent(
     () => import("./GalleryImages/index.vue"),
   ),

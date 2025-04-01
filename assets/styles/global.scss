@@ -60,6 +60,17 @@ img {
     flex-wrap: wrap;
 }
 
+.justify-end {
+    justify-content: end;
+}
+
+.col-40 {
+    width: 40%;
+}
+.col-20 {
+    width: 20%;
+}
+
 .col-25, .col-sm-25 {
     width: 25%;
 }

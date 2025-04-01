@@ -1,5 +1,5 @@
 <template>
-    <div class="upcoming" data-scroll-section>
+    <div class="upcoming">
         <div class="container-wide">
             <div class="upcoming-wrapper">
                 <div class="bg-img-wrapper">
@@ -27,7 +27,6 @@
 export default {
     setup () {
         
-
         return {}
     }
 }

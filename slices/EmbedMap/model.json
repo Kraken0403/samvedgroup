@@ -1,0 +1,28 @@
+{
+  "id": "embed_map",
+  "type": "SharedSlice",
+  "name": "EmbedMap",
+  "description": "EmbedMap",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "iframecode": {
+          "type": "StructuredText",
+          "config": {
+            "label": "iframecode",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "embed"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

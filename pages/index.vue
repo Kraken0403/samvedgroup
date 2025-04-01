@@ -1,5 +1,5 @@
 <template>
-    <div data-scroll-container>
+    <div >
         <Header />
         <HomeHero />
         <Whatsapp />
@@ -7,20 +7,12 @@
         <Upcoming />
         <ProjectsCarousel />
         <Collab />
-        <Testimonial />
+        <!-- <Testimonial /> -->
         <TestimonialCarousel />
         <Footer />
+        <!-- <h1>Home</h1> -->
     </div>
 </template>
-
-<script>
-export default {
-    setup () {
-    
-        return {}
-    }
-}
-</script>
 
 <style lang="scss" scoped>
 

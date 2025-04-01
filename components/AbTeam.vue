@@ -1,5 +1,5 @@
 <template>
-    <div class="ab-team" data-scroll-section>
+    <div class="ab-team" >
         <div class="container-wide">
             <div class="abt-wrapper">
                 <div class="abt-head">

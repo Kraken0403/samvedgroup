@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"iframecode": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consequat aute culpa exercitation quis consectetur minim. Mollit cillum non et nulla ipsum amet irure duis cupidatat laboris Lorem."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

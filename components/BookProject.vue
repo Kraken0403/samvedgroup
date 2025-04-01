@@ -1,12 +1,10 @@
 <template>
     <div >
-      <Header logoImage="/logo.png" hamburgerColor="#111111" />
-      <ContactHero title="Book Now" />
-  
+
       <!-- Booking Form Section -->
-      <div class="container-narrow" data-scroll-section>
+      <div class="container-narrow">
         <div class="booking-form-container">
-            <h2>Book Your Spot for {{ projectTitle }}</h2>
+            <h2>Book Your Spot for {{ data.slices[0].primary.project_title }} </h2>
             <form @submit.prevent="submitBookingForm">
             <input type="hidden" name="subject" :value="`Booking Request for ${projectTitle}`" />
             <input type="text" v-model="form.name" placeholder="Name" required />
@@ -24,8 +22,18 @@
   import { ref, computed, onMounted } from 'vue';
   import { useRoute } from 'vue-router';
   
+  const props = defineProps({
+    data: {
+      type: Object,
+      required: true,
+    },
+  });
+  
+
   // Get route object
   const route = useRoute();
+
+  
   
   // Extract projectTitle from route query parameters
   const projectTitle = computed(() => route.query.projectTitle || '');
@@ -69,7 +77,7 @@
   };
   </script>
   
-  <style src="../components/BookProject.scss" lang="scss" scoped>
+  <style src="./BookProject.scss" lang="scss" scoped>
   
   </style>
   

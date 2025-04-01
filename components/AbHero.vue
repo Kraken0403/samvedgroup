@@ -1,5 +1,5 @@
 <template>
-    <div class="ab-hero" data-scroll-section>
+    <div class="ab-hero">
         <div class="container-wide">
             <div class="ab-hero-wrapper">
                 <div class="ab-head">

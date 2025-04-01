@@ -33,7 +33,18 @@
         width: 100%;
         overflow: hidden;
         position: relative;
+        transition: all 0.2s ease;
+
+        &:hover {
+            transition: all 0.2s ease;
+            img {
+                filter: grayscale(0%);
+                transform: translate(-50%, -50% ) scale(1.02);
+            }
+        }
         img {
+            transition: all 0.2s ease;
+
             position: absolute;
             top: 50%;
             left: 50%;
@@ -41,6 +52,7 @@
             height: 100%;
             object-fit: cover;
             transform: translate(-50%, -50%);
+            filter: grayscale(100%);
             // transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
     }

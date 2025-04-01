@@ -31,7 +31,7 @@ export default {
 
         span {
             font-size: 45px;
-            background: rgb(202, 202, 202);
+            background: rgb(155, 155, 155);
         }
     }
 

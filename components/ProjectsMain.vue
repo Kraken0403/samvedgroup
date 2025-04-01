@@ -1,5 +1,5 @@
 <template>
-    <div class="projects" data-scroll-section>
+    <div class="projects">
       <div class="container-wide">
         <project-filter @filterProjects="handleFilter" />
   

@@ -3,8 +3,9 @@
         <Header />
         <ProjectHero :data="projectData"/>
         <ProjectContent :data="projectData"/>
-        <Testimonial />
-        <TestimonialCarousel />
+        <BookProject :data="projectData"/>
+        <!-- <Testimonial /> -->
+        <!-- <TestimonialCarousel /> -->
         <Footer />
     </div>
 </template>
