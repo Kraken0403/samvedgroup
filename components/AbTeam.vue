@@ -40,7 +40,7 @@
 
                     <div class="abt-photo">
                         <div class="abt-photo">
-                            <img src="../assets/images/Dhanik.jpg" alt="">
+                            <img src="../assets/images/Dhanik.jpeg" alt="">
                             <h2>Mr. Zeel Patel</h2>
                             <p>Director</p>
                         </div>
