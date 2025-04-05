@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header logoImage="/logo.png" hamburgerColor="#111111"/>
+        <Header hamburgerColor="#111111"/>
         <!-- <AbHero caption="gallery" title="Have a quick tour of our lookbook"/> -->
         <ProjectHeroTwo title="Our Gallery"/>
 

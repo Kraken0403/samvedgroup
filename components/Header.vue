@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <div class="container-wide">
-      <div class="row">
+      <div class="row desktop-nav">
         <div class="col-40 d-flex">
           <div class="header-1">
             <NuxtLink to="/projects">Projects</NuxtLink>
@@ -68,17 +68,69 @@
         </div>
       </div>
 
-      <div class="overlay-bg" @click="toggleOverlay" ref="overlayBg"></div>
-      <div class="overlay-menu" ref="overlayMenu">
-        <div class="menu-items">
-          <div class="menu-item"><NuxtLink to="/">Home</NuxtLink></div>
-          <div class="menu-item"><NuxtLink to="/projects">Projects</NuxtLink></div>
-          <div class="menu-item"><NuxtLink to="/about">About</NuxtLink></div>
-          <div class="menu-item"><NuxtLink to="/channel-partner">Partner with Us</NuxtLink></div>
-          <div class="menu-item"><NuxtLink to="/contact">Contact Us</NuxtLink></div>
+
+      <div class="mobile-nav">
+        <div class="d-flex mobile-nav-inner">
+          <div class="mobile-logo">
+            <NuxtLink to="/">
+                <img :src="logoImage" alt="Logo" />
+            </NuxtLink>
+          </div>
+          <div class="hamburger-icon"  @click="toggleOverlay">
+              <div id="navLine1" class="ham-span"></div>
+              <div id="navLine2" class="ham-span"></div>
+              <div id="navLine1" class="ham-span"></div>
+          </div>
+        </div>
+        
+        <div class="overlay-bg" @click="toggleOverlay" ref="overlayBg"></div>
+          <div class="overlay-menu" ref="overlayMenu">
+            <div class="menu-items">
+              <div class="menu-item"><NuxtLink to="/">Home</NuxtLink></div>
+              <div class="menu-item"><NuxtLink to="/projects">Projects</NuxtLink></div>
+              <div class="menu-item">
+                <ul>
+                  <span>About Samved</span>
+                  <li>
+                    <NuxtLink to="/about">About Us</NuxtLink>
+                    <NuxtLink to="/ourteam">Our Team</NuxtLink>
+                    
+                  </li>
+                </ul>
+                
+              </div>
+              <div class="menu-item">
+                <ul>
+                  <span>Partner with us</span>
+                  <li>
+                    <NuxtLink to="/channel-partner">Channel Partner</NuxtLink>
+                    <NuxtLink to="/jd">Joint Development</NuxtLink>
+                    <NuxtLink to="/land">Land</NuxtLink>                    
+                  </li>
+                </ul>
+               
+              </div>
+              <div class="menu-item">
+                <ul>
+                 <span>News & Media</span>
+                  <li>
+                    <NuxtLink to="/gallery">Gallery</NuxtLink>
+                    <NuxtLink to="/awards">Awards</NuxtLink>                 
+                  </li>
+                </ul>
+
+              </div>
+              <div class="menu-item"><NuxtLink to="/contact">Contact Us</NuxtLink></div>
+            </div>
+            <div class="fixed-close" @click="toggleOverlay">
+              &times;
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      
+
   </div>
 </template>
 
@@ -140,8 +192,7 @@ export default {
       if (!process.client) return
 
       if (isMenuOpen.value && overlayMenu.value) {
-        gsap.to("#navLine1", { y: 4, duration: 0.3 })
-        gsap.to("#navLine3", { y: -4, duration: 0.3 })
+   
         gsap.to(overlayMenu.value, {
           right: 0,
           duration: 0.5,
@@ -156,8 +207,7 @@ export default {
           }
         })
       } else {
-        gsap.to("#navLine1", { y: 0, duration: 0.3 })
-        gsap.to("#navLine3", { y: 0, duration: 0.3 })
+        
         gsap.to(overlayMenu.value, {
           right: '-100%',
           duration: 0.5,

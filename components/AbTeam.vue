@@ -30,21 +30,21 @@
                             <p>Director</p>
                         </div>
                     </div>
-                    <!-- <div class="abt-photo">
+                    <div class="abt-photo">
                         <div class="abt-photo">
                             <img src="../assets/images/Dhanikbhai.jpg" alt="">
                             <h2>Mr. Dhanikbhai M Patel</h2>
                             <p>Managing Director</p>
                         </div>
-                    </div> -->
+                    </div>
 
-                    <div class="abt-photo">
+                    <!-- <div class="abt-photo">
                         <div class="abt-photo">
-                            <img src="../assets/images/zeelbhai.jpg" alt="">
+                            <img src="../assets/images/zeel.png" alt="">
                             <h2>Mr. Zeel Patel</h2>
                             <p>Director</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

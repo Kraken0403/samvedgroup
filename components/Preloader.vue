@@ -1,7 +1,7 @@
 <template>
   <div class="preloader">
     <div class="preloader-content">
-      <h2>Logo</h2>
+      <img src="../assets/images/logo.png" alt="">
     </div>
   </div>
 </template>
@@ -23,5 +23,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.preloader-content img{
+  width: 150px;
 }
 </style>

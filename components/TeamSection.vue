@@ -26,9 +26,9 @@
   
   <script setup>
   import prakashbhai from '@/assets/images/prakashbhai2.jpg'
-  import jigneshbhai from '@/assets/images/jigneshbhai.jpg'
+  import jigneshbhai from '@/assets/images/main.jpg'
   import rachitbhai from '@/assets/images/rachitbhai2.png'
-  import zeelbhai from '@/assets/images/zeelbhai.jpg'
+  import zeelbhai from '@/assets/images/zeel.png'
   
   const team = [
     {
@@ -50,7 +50,7 @@
       role: 'Director',
       image: rachitbhai,
       description:
-        'With a strong sense of modern design and operational expertise, Mr. Rachit Patel oversees multiple verticals in the company. He ensures seamless execution and customer satisfaction.'
+        'An architect by training, Rachit has the ability to convert an empty space into a work of living art. And as director of branding and communication for Samved Group, he has elevated the brand to symbolise modern luxury living in Gujarat. He is obsessed with quality while looking for something new to experiment with, something that is evident in the unimaginable luxury of a project like The Grasslands and in the thoughtful details of Samved.'
     },
     {
       name: 'Mr. Zeel Patel',
